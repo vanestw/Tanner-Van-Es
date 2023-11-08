@@ -26,7 +26,7 @@ Before we are able to create a new directory and clone the repository onto your 
 
 1. Go to github.com and create an account.
 
-2. Within powershell or terminal type the following commands:
+2. Within PowerShell or terminal type the following commands:
 
 ```bash
 git config --global user.email "your school email address"
@@ -61,7 +61,7 @@ Please change the `Repsitory name` to that of you and your group member, for exa
 
 Perfect! Now you have successfully created a fork of the main repository. This newly created `fork` is where you and you partner will be working out of.
 
-Before we can do anything, however, we must clone a copy of our new forked repository onto our machines. First we can create a directory in which we will clone the repo. Type the following into powershell or terminal:
+Before we can do anything, however, we must clone a copy of our new forked repository onto our machines. First we can create a directory in which we will clone the repo. Type the following into PowerShell or terminal:
 
 ```bash
 mkdir ClassProject
