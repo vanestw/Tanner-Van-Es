@@ -1,9 +1,3 @@
----
-title: Git Commands
-subtitle: You Need To Know
-author: Eli Blume
----
-
 # CSC1061 FALL 2023 CLASS PROJECT
 
 On Windows, first install [Git](https://git-scm.com/download/win). Then open up the program Windows PowerShell.
