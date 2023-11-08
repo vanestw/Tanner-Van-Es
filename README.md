@@ -45,6 +45,19 @@ You should be faced with the following screen:
 
 ![CSC git screen](./Assets/csc1061-git-full-window.png)
 
+Now navigate to the `fork` button which looks like this:
+
+![CSC fork button](./Assets/csc-git-fork-button.png)
+
+Now click on the arrow directly to the right of the `fork` button. Once the arrow has been pressed you should see this:
+
+![CSC fork button pushed](./Assets/csc-git-fork-button-pushed.png)
+
+Click on the `+ Create a new fork`. Once you do that you should be looking at this:
+
+![fork screen](./Assets/fork-screen.png)
+
+Please change the `Repsitory name` to that of you and your group member, for example, `Tanner_Van-Es--Eli_Blume`. Leave everything else the same and press the `Create fork` button.
 
 Awesome, now we can create a directory and clone the repository! Type the following into powershell or terminal:
 
