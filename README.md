@@ -45,7 +45,7 @@ Now navigate to the `fork` button which looks like this:
 
 Now click on the arrow directly to the right of the `fork` button. Once the arrow has been pressed you should see this:
 
-![CSC fork button pushed](./Assets/csc-git-fork-button-pushed.png)
+![CSC fork button pushed](./Assets/csc-fork-button-pressed.png)
 
 Click on the `+ Create a new fork`. Once you do that you should be looking at this:
 
