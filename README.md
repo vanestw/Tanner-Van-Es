@@ -1,5 +1,7 @@
 # CSC1061 FALL 2023 CLASS PROJECT
 
+===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===
+
 On Windows, first install [Git](https://git-scm.com/download/win). Then open up the program Windows PowerShell.
 
 On Mac you will first need to install the Homebrew package manager. You can do so by opening the program Terminal and run this command:
@@ -15,6 +17,8 @@ After Homebrew is installed, you need to install the git package. To do so just 
 ```homebrew
 brew install git
 ```
+
+===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===
 
 Before we are able to create a new directory and clone the repository onto your machine, you must do two things.
 
