@@ -20,6 +20,8 @@ brew install git
 
 ===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===
 
+## Instructions
+
 Before we are able to create a new directory and clone the repository onto your machine, you must do two things.
 
 1. Go to github.com and create an account.
