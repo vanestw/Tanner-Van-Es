@@ -107,7 +107,7 @@ git push origin <forked repo name>
 
 
 
-===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===
+***===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===***
 
 On Windows, first install [Git](https://git-scm.com/download/win). Then open up the program Windows PowerShell.
 
@@ -125,4 +125,4 @@ After Homebrew is installed, you need to install the git package. To do so just 
 brew install git
 ```
 
-===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===
+***===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===***
