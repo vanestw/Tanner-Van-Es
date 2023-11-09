@@ -1,25 +1,5 @@
 # CSC1061 FALL 2023 CLASS PROJECT
 
-===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===
-
-On Windows, first install [Git](https://git-scm.com/download/win). Then open up the program Windows PowerShell.
-
-On Mac you will first need to install the Homebrew package manager. You can do so by opening the program Terminal and run this command:
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-[Learn more about Homebrew here](https://brew.sh/)
-
-After Homebrew is installed, you need to install the git package. To do so just run the following command in Terminal:
-
-```homebrew
-brew install git
-```
-
-===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===
-
 ## Instructions
 
 Before we are able to create a new directory and clone the repository onto your machine, you must do two things.
@@ -121,3 +101,28 @@ Finally, we can push our changes into the remote repository. To do so run:
 ```bash
 git push origin <forked repo name>
 ```
+
+
+
+
+
+
+===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===
+
+On Windows, first install [Git](https://git-scm.com/download/win). Then open up the program Windows PowerShell.
+
+On Mac you will first need to install the Homebrew package manager. You can do so by opening the program Terminal and run this command:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+[Learn more about Homebrew here](https://brew.sh/)
+
+After Homebrew is installed, you need to install the git package. To do so just run the following command in Terminal:
+
+```homebrew
+brew install git
+```
+
+===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===
