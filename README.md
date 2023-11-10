@@ -1,6 +1,8 @@
+<div align="center">
 # CSC1061 FALL 2023 CLASS PROJECT
 
 ## Instructions
+</div>
 
 Before we are able to create a new directory and clone the repository onto your machine, you must do two things.
 
