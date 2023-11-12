@@ -16,7 +16,7 @@
 
 [**Submitting Your Code**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#submitting-your-code)
 
-[Extraneous Resources](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#extraneous-git-resources)
+[**Extraneous Resources**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#extraneous-git-resources)
 
 ## Instructions
 
