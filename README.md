@@ -16,6 +16,8 @@
 
 ![***Submitting Your Code***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#submitting-your-code)
 
+![Extraneous Resources](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#extraneous-git-resources)
+
 ## Instructions
 
 [***Click here if you are using your own device***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
