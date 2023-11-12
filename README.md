@@ -132,7 +132,7 @@ Finally, we can push our changes into the remote repository. To do so, run:
 git push origin <forked repo name>
 ```
 
-### Syncing Your Fork with the Main Repository
+## Syncing Your Fork with the Main Repository
 
 At the start of each class you may want to sync your Forked repository with the main repository. This may be helpful if you see changes made in the main repository that you want mirrored within your fork. 
 
@@ -162,7 +162,7 @@ A pull request is a way for you to request that your code be *pulled* into the m
 
 Once you write a sufficient title and add a description explaining your code press the `Create pull request` button. You have successfully created a pull request thread, in which the pull request lives. From this point your code will be reviewed and any discussion, changes, or announcements regarding that pull request will happen within the thread.
 
-# Using Personal Device
+## Using Personal Device
 
 ***If you are using your personal device you will need to install Git onto your computer. The following instructions go though those steps.***
 
