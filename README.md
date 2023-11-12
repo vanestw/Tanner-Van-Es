@@ -108,8 +108,6 @@ The `.` refers to the current directory and will add every file within your curr
 
 It is essential that your commit message is concise and clearly explains what you have modified or added so one of your peers/group members can see what you have done. Also, these comments will be used to take your project in the grading process. Treat your commit messages as seriously as you would inline comments.
 
-***If you are using your personal device you will need to install git onto your computer. The following instructions go though those steps.***
-
 Next, type the following command in PowerShell:
 
 ```bash
@@ -153,6 +151,8 @@ A pull request is a way for you to request that your code be *pulled* into the m
 Once you write a sufficient title and add a description explaining your code press the `Create pull request` button. You have successfully created a pull request thread, in which the pull request lives. From this point your code will be reviewed and any discussion, changes, or announcements regarding that pull request will happen within the thread.
 
 # Using Personal Device
+
+***If you are using your personal device you will need to install git onto your computer. The following instructions go though those steps.***
 
 ### Windows
 
