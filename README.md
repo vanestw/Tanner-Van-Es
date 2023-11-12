@@ -122,7 +122,7 @@ Next, type the following command in PowerShell:
 git commit -m "Your commit message here"
 ```
 
-It is essential that your commit message is concise and clearly explains what you have modified or added so one of your peers/group members can see what you have done. Also, these comments will be used to take your project in the grading process. Treat your commit messages as seriously as you would inline comments.
+It is essential that your commit message is concise and clearly explains what you have modified or added so one of your peers/group members can see what you have done. Treat your commit messages as seriously as you would inline comments.
 
 **Committing should be done semi-frequently. If you have completed a section of code and successfully got it to compile and run, make a commit!!**
 
