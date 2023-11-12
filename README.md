@@ -142,7 +142,7 @@ In order to do this press the `Sync fork` button that is located directly under 
 
 ![sync-fork button](./.assets/sync-fork-button.png)
 
-You should then see an option to sync the changes. After this is done, open PowerShell and run the following command:
+You should then see an option to sync the changes. After this is done, open PowerShell and run the following commands:
 
 ```bash
 cd ClassProject
