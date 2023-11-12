@@ -1,6 +1,6 @@
 <div align="center">
 
-### CSC1061 FALL 2023 CLASS PROJECT
+<h1>CSC1061 FALL 2023 CLASS PROJECT</h1>
 
 </div>
 
