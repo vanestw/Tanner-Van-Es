@@ -70,6 +70,8 @@ Now reopen the PowerShell and type in this command:
 git clone <the url you copied from your Forked repo>
 ```
 
+***Some IDEs will prompt you when they detect that you are in a Git repository, and if you allow the IDE, it will help abstract some of these command-line commands and run them for you through the graphical user interface. Depending on the IDE the rest of the readme might not be applicable***
+
 If you then type `ls` into PowerShell, you should see the name of your Forked repository. Awesome!
 
 Now you have a local copy of the codebase on your machine, and it can be opened via your favorite IDE; navigate to the ClassProject directory like you would any directory and start the project. You can now begin freely working on your code.
@@ -95,8 +97,6 @@ git add .
 ```
 
 The `.` refers to the current directory and will add every file within your current working directory to be tracked.
-
-***Some IDEs will prompt you when they detect that you are in a Git repository, and if you allow the IDE, it will help abstract some of these command-line commands and run them for you through the graphical user interface. Depending on the IDE the rest of the readme might not be applicable***
 
 It is essential that your commit message is concise and clearly explains what you have modified or added so one of your peers/group members can see what you have done. Also, these comments will be used to take your project in the grading process. Treat your commit messages as seriously as you would inline comments.
 
