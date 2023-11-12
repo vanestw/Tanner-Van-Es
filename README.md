@@ -16,13 +16,13 @@
 
 ![***Submitting Your Code***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#submitting-your-code)
 
-### Instructions
+## Instructions
 
 [***Click here if you are using your own device***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
 
 *In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
-### Getting Started
+## Getting Started
 
 Before we can create a new directory and clone the repository onto your machine, you must do two things.
 
@@ -35,7 +35,7 @@ git config --global user.email "your school email address"
 git config --global user.name "your group members names"
 ```
 
-### Creating a Fork of the Main Repository
+## Creating a Fork of the Main Repository
 
 Next, go into your GitHub account and go to the following URL:
 
@@ -63,7 +63,7 @@ Please change the `Repository name` to that of you and your group member, for ex
 
 Perfect! Now, you have successfully created a Fork of the main repository. This newly created `Fork` is where you and your partner will be working.
 
-### Cloning Your Fork
+## Cloning Your Fork
 
 Before we can do anything, we must clone a copy of our new Forked repository onto our machines. First, we can create a directory to clone the repo. Type the following into PowerShell or terminal:
 
@@ -94,7 +94,7 @@ If you then type `ls` into PowerShell, you should see the name of your Forked re
 
 Now you have a local copy of the codebase on your machine, and it can be opened via your favorite IDE; navigate to the ClassProject directory like you would any directory and start the project. You can now begin freely working on your code.
 
-### Understanding and Working with Git
+## Understanding and Working with Git
 
 The beauty of Git is its ability to share and help *version* our code.
 
@@ -152,7 +152,7 @@ You must run `git pull` in order to sync any changes made from the remote reposi
 
 **If you are using an IDE, there should be an option to run `git pull`**
 
-### Submitting Your Code
+## Submitting Your Code
 
 If your group feels good about the code you have written and want to "submit" it, create a pull request. In order to do that look for the `Contribute` button directly to the left of the `Sync fork` button (as seen above). This will open a new screen:
 
