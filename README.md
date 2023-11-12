@@ -6,7 +6,7 @@
 
 </div>
 
-[Click here if you are using your own device](pd)
+[Click here if you are using your own device](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
 
 *In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
@@ -115,7 +115,7 @@ git push origin <forked repo name>
 
 # 
 
-# Using Personal Device {#pd}
+# Using Personal Device
 
 ## Windows
 
