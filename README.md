@@ -146,7 +146,7 @@ You must run `git pull` in order to sync any changes made from the remote reposi
 
 If your group feels good about the code you have written and want to "submit" it, create a pull request. In order to do that look for the `Contribute` button directly to the left of the `Sync fork` button (as seen above). This will open a new screen:
 
-![creating-pull-request](./Assets/creating-pull-requests.png)
+![creating-pull-request](./Assets/creating-pull-request.png)
 
 A pull request is a way for you to request that your code be *pulled* into the main repository. As you can see, there is space for you to add a title and a description. Also note that at the bottom of the screen it shows all the commits and files changed that are apart of this pull request.
 
