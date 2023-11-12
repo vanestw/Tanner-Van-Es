@@ -187,3 +187,9 @@ brew install git
 ```
 
 [***Click here to return to instructions***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#getting-started)
+
+## Extraneous Git Resources
+
+[Git Documentation](https://git-scm.com/doc)
+
+[A Good Git Cheatsheet](https://quickref.me/git)
