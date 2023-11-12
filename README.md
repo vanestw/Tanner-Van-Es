@@ -174,4 +174,4 @@ After Homebrew is installed, you need to install the Git package. To do so, just
 brew install git
 ```
 
-[***Click here to return to instructions***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#instructions)
+[***Click here to return to instructions***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#getting-started)
