@@ -1,3 +1,0 @@
-/home/tannervanes/CLionProjects/Repos/ClassProject/Tanner_Van-Es--Eli_Blume/cmake-build-debug/CMakeFiles/ClassProject.dir
-/home/tannervanes/CLionProjects/Repos/ClassProject/Tanner_Van-Es--Eli_Blume/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/tannervanes/CLionProjects/Repos/ClassProject/Tanner_Van-Es--Eli_Blume/cmake-build-debug/CMakeFiles/rebuild_cache.dir
