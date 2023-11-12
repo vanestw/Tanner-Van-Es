@@ -4,7 +4,7 @@
 
 </div>
 
-## Instructions
+### Instructions
 
 [***Click here if you are using your own device***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
 
