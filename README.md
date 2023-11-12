@@ -152,8 +152,6 @@ A pull request is a way for you to request that your code be *pulled* into the m
 
 Once you write a sufficient title and add a description explaining your code press the `Create pull request` button. You have successfully created a pull request thread, in which the pull request lives. From this point your code will be reviewed and any discussion, changes, or announcements regarding that pull request will happen within the thread.
 
-# 
-
 # Using Personal Device
 
 ## Windows
