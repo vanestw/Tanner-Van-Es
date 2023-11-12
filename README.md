@@ -6,7 +6,7 @@
 
 </div>
 
-[Click here if you are using your own device](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
+[***Click here if you are using your own device***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
 
 *In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
@@ -31,7 +31,7 @@ The following screen should come up:
 
 ![CSC git screen](./Assets/csc1061-git-full-window.png)
 
-Now navigate to the `fork` button, which looks like this:
+Now navigate to the `Fork` button, which looks like this:
 
 ![CSC fork button](./Assets/csc-git-fork-button.png)
 
@@ -43,18 +43,18 @@ Click on the `+ Create a new fork`. Once you do that, your screen should be look
 
 ![fork screen](./Assets/fork-screen.png)
 
-Please change the `Repository name` to that of you and your group member, for example, `Tanner_Van-Es--Eli_Blume.` Leave everything else the same and press the `Create fork` button.
+Please change the `Repository name` to that of you and your group member, for example, `Tanner_Van-Es--Eli_Blume.` Leave everything else the same and press the `Create Fork` button.
 
-Perfect! Now, you have successfully created a fork of the main repository. This newly created `fork` is where you and your partner will be working.
+Perfect! Now, you have successfully created a Fork of the main repository. This newly created `Fork` is where you and your partner will be working.
 
-However, before we can do anything, we must clone a copy of our new forked repository onto our machines. First, we can create a directory to clone the repo. Type the following into PowerShell or terminal:
+However, before we can do anything, we must clone a copy of our new Forked repository onto our machines. First, we can create a directory to clone the repo. Type the following into PowerShell or terminal:
 
 ```bash
 mkdir ClassProject
 cd ClassProject
 ```
 
-That created a new directory named ClassProject which you will work out of. We need to clone a copy of our Git repository to work directly with it. To do that, press the following `code` button on the front page of your newly forked repo:
+That created a new directory named ClassProject which you will work out of. We need to clone a copy of our Git repository to work directly with it. To do that, press the following `code` button on the front page of your newly Forked repo:
 
 ![code button](./Assets/code-button-clone.png)
 
@@ -67,16 +67,16 @@ https://github.com/<github-username>/<forked-repo-name>.git
 Now reopen the PowerShell and type in this command:
 
 ```bash
-git clone <the url you copied from your forked repo>
+git clone <the url you copied from your Forked repo>
 ```
 
-If you then type `ls` into PowerShell, you should see the name of your forked repository. Awesome!
+If you then type `ls` into PowerShell, you should see the name of your Forked repository. Awesome!
 
 Now you have a local copy of the codebase on your machine, and it can be opened via your favorite IDE; navigate to the ClassProject directory like you would any directory and start the project. You can now begin freely working on your code.
 
 The beauty of Git is its ability to share and help *version* our code.
 
-Three primary levels of Git are important to understand. The **local repository** (the cloned fork in your ClassProjects directory), the **staging area** (intermediate reviewing step before committing and pushing to your remote repository), and the **remote repository** (your GitHub fork).
+Three primary levels of Git are important to understand. The **local repository** (the cloned Fork in your ClassProjects directory), the **staging area** (intermediate reviewing step before committing and pushing to your remote repository), and the **remote repository** (your GitHub Fork).
 
 Committing should be done frequently, like saving your project or compiling your code. 
 
@@ -137,8 +137,4 @@ After Homebrew is installed, you need to install the git package. To do so, just
 brew install git
 ```
 
-<div align="center">
-
-***===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===***
-
-</div>
+[***Click here to return to instructions***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#instructions)
