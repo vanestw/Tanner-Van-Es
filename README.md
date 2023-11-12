@@ -6,6 +6,8 @@
 
 </div>
 
+[Click here if you are using your own device](pd)
+
 *In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
 Before we can create a new directory and clone the repository onto your machine, you must do two things.
@@ -113,13 +115,13 @@ git push origin <forked repo name>
 
 # 
 
-<div align="center">
+# Using Personal Device {#pd}
 
-***===NEED TO FIGURE OUT WHAT TO DO WITH THIS BLOCK===***
-
-</div>
+## Windows
 
 On Windows, first install [Git](https://git-scm.com/download/win). Then open up the program Windows PowerShell.
+
+## Mac
 
 On Mac you will first need to install the Homebrew package manager. You can do so by opening the program Terminal and run this command:
 
