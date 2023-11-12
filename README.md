@@ -101,6 +101,7 @@ The `.` refers to the current directory and will add every file within your curr
 It is essential that your commit message is concise and clearly explains what you have modified or added so one of your peers/group members can see what you have done. Also, these comments will be used to take your project in the grading process. Treat your commit messages as seriously as you would inline comments.
 
 ***If you are using your personal device you will need to install git onto your computer. The following instructions go though those steps.***
+
 Next, type the following command in PowerShell:
 
 ```bash
