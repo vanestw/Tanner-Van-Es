@@ -136,7 +136,7 @@ cd <forked repository name>
 git pull
 ```
 
-You must run `git pull` in order to sync any changes made from the remote repository into your local repository. You also must be inside of the directory containing the forked repository in order for the git command to work.
+You must run `git pull` in order to sync any changes made from the remote repository into your local repository. You also must be inside of the directory containing the forked repository in order for the Git command to work.
 
 **If you are using an IDE, there should be an option to run `git pull`**
 
@@ -152,7 +152,7 @@ Once you write a sufficient title and add a description explaining your code pre
 
 # Using Personal Device
 
-***If you are using your personal device you will need to install git onto your computer. The following instructions go though those steps.***
+***If you are using your personal device you will need to install Git onto your computer. The following instructions go though those steps.***
 
 ### Windows
 
@@ -168,7 +168,7 @@ On Mac you will first need to install the Homebrew package manager. You can do s
 
 [Learn more about Homebrew here](https://brew.sh/)
 
-After Homebrew is installed, you need to install the git package. To do so, just run the following command in PowerShell:
+After Homebrew is installed, you need to install the Git package. To do so, just run the following command in PowerShell:
 
 ```homebrew
 brew install git
