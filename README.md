@@ -194,4 +194,4 @@ brew install git
 
 [Git Documentation](https://git-scm.com/doc)
 
-[A Good Git Cheatsheet](https://quickref.me/git)
+[Git Cheatsheet](https://quickref.me/git)
