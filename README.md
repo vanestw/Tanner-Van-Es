@@ -4,6 +4,16 @@
 
 </div>
 
+### Topics Covered
+
+![***Creating a Fork***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#cloning-your-fork)
+
+![***Understanding and Working with Git***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#understanding-and-working-with-git)
+
+![***Syncing Your Fork with the Main Repository***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#syncing-your-fork-with-the-main-repository)
+
+![***Submitting Your Code***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#submitting-your-code)
+
 ### Instructions
 
 [***Click here if you are using your own device***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
@@ -82,7 +92,7 @@ If you then type `ls` into PowerShell, you should see the name of your Forked re
 
 Now you have a local copy of the codebase on your machine, and it can be opened via your favorite IDE; navigate to the ClassProject directory like you would any directory and start the project. You can now begin freely working on your code.
 
-### Understanding and Working With Git
+### Understanding and Working with Git
 
 The beauty of Git is its ability to share and help *version* our code.
 
@@ -120,7 +130,7 @@ Finally, we can push our changes into the remote repository. To do so, run:
 git push origin <forked repo name>
 ```
 
-### Syncing Your Fork With the Main Repository
+### Syncing Your Fork with the Main Repository
 
 At the start of each class you may want to sync your Forked repository with the main repository. This may be helpful if you see changes made in the main repository that you want mirrored within your fork. 
 
