@@ -53,7 +53,7 @@ Now navigate to the `Fork` button, which looks like this:
 
 ![CSC fork button](./.assets/csc-git-fork-button.png)
 
-Now click the arrow directly to the right of the `fork` button. Once the arrow has been pressed, you should see this:
+Now click the arrow directly to the right of the `Fork` button. Once the arrow has been pressed, you should see this:
 
 ![CSC fork button pushed](./.assets/csc-fork-button-pressed.png)
 
@@ -136,7 +136,7 @@ git push origin <forked repo name>
 
 ## Syncing Your Fork with the Main Repository
 
-At the start of each class you may want to sync your Forked repository with the main repository. This may be helpful if you see changes made in the main repository that you want mirrored within your fork. 
+At the start of each class you may want to sync your Forked repository with the main repository. This may be helpful if you see changes made in the main repository that you want mirrored within your Fork. 
 
 In order to do this press the `Sync fork` button that is located directly under the `Code` button you used to clone your Fork:
 
