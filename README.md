@@ -5,6 +5,7 @@
 ## Instructions
 
 </div>
+
 *In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
 Before we can create a new directory and clone the repository onto your machine, you must do two things.
