@@ -5,7 +5,7 @@
 ## Instructions
 
 </div>
-*In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal. 
+*In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
 Before we can create a new directory and clone the repository onto your machine, you must do two things.
 
@@ -77,7 +77,7 @@ Three primary levels of Git are important to understand. The **local repository*
 
 Committing should be done frequently, like saving your project or compiling your code. 
 
-The ***local repository *** (local repo)  is the copy of the repository on your machine (the repo we just cloned). The ***staging area*** is something we have yet to come across. After you have written some code, you can add the changes you have made to the staging area. The staging area allows the files you have changed to sit before you are ready to **commit** and **push** them into the remote repo, much like laying out the things you want to take on the bed before putting them in your suitcase. 
+The ***local repository*** (local repo)  is the copy of the repository on your machine (the repo we just cloned). The ***staging area*** is something we have yet to come across. After you have written some code, you can add the changes you have made to the staging area. The staging area allows the files you have changed to sit before you are ready to **commit** and **push** them into the remote repo, much like laying out the things you want to take on the bed before putting them in your suitcase. 
 
 To add modified files into the staging area so they are ready for a commit, come back to your Terminal or PowerShell window and run:
 
