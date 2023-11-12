@@ -10,6 +10,8 @@
 
 *In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
+### Getting Started
+
 Before we can create a new directory and clone the repository onto your machine, you must do two things.
 
 1. Go to github.com and create an account.
@@ -20,6 +22,8 @@ Before we can create a new directory and clone the repository onto your machine,
 git config --global user.email "your school email address"
 git config --global user.name "your group members names"
 ```
+
+### Creating a Fork of the Main Repository
 
 Next, go into your GitHub account and go to the following URL:
 
@@ -47,7 +51,9 @@ Please change the `Repository name` to that of you and your group member, for ex
 
 Perfect! Now, you have successfully created a Fork of the main repository. This newly created `Fork` is where you and your partner will be working.
 
-However, before we can do anything, we must clone a copy of our new Forked repository onto our machines. First, we can create a directory to clone the repo. Type the following into PowerShell or terminal:
+### Cloning Your Fork
+
+Before we can do anything, we must clone a copy of our new Forked repository onto our machines. First, we can create a directory to clone the repo. Type the following into PowerShell or terminal:
 
 ```bash
 mkdir ClassProject
@@ -75,6 +81,8 @@ git clone <the url you copied from your Forked repo>
 If you then type `ls` into PowerShell, you should see the name of your Forked repository. Awesome!
 
 Now you have a local copy of the codebase on your machine, and it can be opened via your favorite IDE; navigate to the ClassProject directory like you would any directory and start the project. You can now begin freely working on your code.
+
+### Understanding and Working With Git
 
 The beauty of Git is its ability to share and help *version* our code.
 
@@ -113,6 +121,36 @@ Finally, we can push our changes into the remote repository. To do so, run:
 ```bash
 git push origin <forked repo name>
 ```
+
+### Syncing Your Fork With the Main Repository
+
+At the start of each class you may want to sync your Forked repository with the main repository. This may be helpful if you see changes made in the main repository that you want mirrored within your fork. 
+
+In order to do this press the `Sync fork` button that is located directly under the `Code` button you used to clone your Fork:
+
+![sync-fork button](./Assets/sync-fork-button.png)
+
+You should then see an option to sync the changes. After this is done, open PowerShell and run the following command:
+
+```bash
+cd ClassProject
+cd <forked repository name>
+git pull
+```
+
+You must run `git pull` in order to sync any changes made from the remote repository into your local repository. You also must be inside of the directory containing the forked repository in order for the git command to work.
+
+**If you are using an IDE, there should be an option to run `git pull`**
+
+### Submitting Your Code
+
+If your group feels good about the code you have written and want to "submit" it, create a pull request. In order to do that look for the `Contribute` button directly to the left of the `Sync fork` button (as seen above). This will open a new screen:
+
+![creating-pull-request](./Assets/creating-pull-requests.png)
+
+A pull request is a way for you to request that your code be *pulled* into the main repository. As you can see, there is space for you to add a title and a description. Also note that at the bottom of the screen it shows all the commits and files changed that are apart of this pull request.
+
+Once you write a sufficient title and add a description explaining your code press the `Create pull request` button. You have successfully created a pull request thread, in which the pull request lives. From this point your code will be reviewed and any discussion, changes, or announcements regarding that pull request will happen within the thread.
 
 # 
 
