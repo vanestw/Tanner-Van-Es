@@ -100,7 +100,7 @@ The beauty of Git is its ability to share and help *version* our code.
 
 Three primary levels of Git are important to understand. The **local repository** (the cloned Fork in your ClassProjects directory), the **staging area** (intermediate reviewing step before committing and pushing to your remote repository), and the **remote repository** (your GitHub Fork).
 
-**Committing should be done semi-frequently. If you have completed a section of code and successfully got it to compile and run, commit!!**
+**Committing should be done semi-frequently. If you have completed a section of code and successfully got it to compile and run, make a commit!!**
 
 The ***local repository*** (local repo)  is the copy of the repository on your machine (the repo we just cloned). The ***staging area*** is something we have yet to come across. After you have written some code, you can add the changes you have made to the staging area. The staging area allows the files you have changed to sit before you are ready to **commit** and **push** them into the remote repo, much like laying out the things you want to take on the bed before putting them in your suitcase. 
 
