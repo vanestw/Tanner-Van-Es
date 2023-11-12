@@ -100,8 +100,6 @@ The beauty of Git is its ability to share and help *version* our code.
 
 Three primary levels of Git are important to understand. The **local repository** (the cloned Fork in your ClassProjects directory), the **staging area** (intermediate reviewing step before committing and pushing to your remote repository), and the **remote repository** (your GitHub Fork).
 
-**Committing should be done semi-frequently. If you have completed a section of code and successfully got it to compile and run, make a commit!!**
-
 The ***local repository*** (local repo)  is the copy of the repository on your machine (the repo we just cloned). The ***staging area*** is something we have yet to come across. After you have written some code, you can add the changes you have made to the staging area. The staging area allows the files you have changed to sit before you are ready to **commit** and **push** them into the remote repo, much like laying out the things you want to take on the bed before putting them in your suitcase. 
 
 To add modified files into the staging area so they are ready for a commit, come back to your Terminal or PowerShell window and run:
@@ -119,6 +117,8 @@ git add .
 The `.` refers to the current directory and will add every file within your current working directory to be tracked.
 
 It is essential that your commit message is concise and clearly explains what you have modified or added so one of your peers/group members can see what you have done. Also, these comments will be used to take your project in the grading process. Treat your commit messages as seriously as you would inline comments.
+
+**Committing should be done semi-frequently. If you have completed a section of code and successfully got it to compile and run, make a commit!!**
 
 Next, type the following command in PowerShell:
 
