@@ -6,17 +6,17 @@
 
 ### Topics Covered
 
-![***Getting Started with Git***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#getting-started)
+[**Getting Started with Git**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#getting-started)
 
-![***Creating a Fork***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#cloning-your-fork)
+[**Creating a Fork**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#cloning-your-fork)
 
-![***Understanding and Working with Git***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#understanding-and-working-with-git)
+[**Understanding and Working with Git**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#understanding-and-working-with-git)
 
-![***Syncing Your Fork with the Main Repository***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#syncing-your-fork-with-the-main-repository)
+[**Syncing Your Fork with the Main Repository**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#syncing-your-fork-with-the-main-repository)
 
-![***Submitting Your Code***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#submitting-your-code)
+[**Submitting Your Code**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#submitting-your-code)
 
-![Extraneous Resources](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#extraneous-git-resources)
+[Extraneous Resources](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#extraneous-git-resources)
 
 ## Instructions
 
