@@ -154,11 +154,11 @@ Once you write a sufficient title and add a description explaining your code pre
 
 # Using Personal Device
 
-## Windows
+### Windows
 
 On Windows, first install [Git](https://git-scm.com/download/win). Then open up the program Windows PowerShell.
 
-## Mac
+### Mac
 
 On Mac you will first need to install the Homebrew package manager. You can do so by opening the program Terminal and run this command:
 
