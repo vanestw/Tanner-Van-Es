@@ -5,6 +5,6 @@
 #include "Test.hpp"
 #include <iostream>
 int main(){
-
-    return -1;
+    std::cout<< "hello" << std::endl;
+    return 0;
 }
