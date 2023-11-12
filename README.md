@@ -33,19 +33,19 @@ https://github.com/nschmidtfrcc/CSC1061FA23
 
 The following screen should come up:
 
-![CSC git screen](./Assets/csc1061-git-full-window.png)
+![CSC git screen](./assets/csc1061-git-full-window.png)
 
 Now navigate to the `Fork` button, which looks like this:
 
-![CSC fork button](./Assets/csc-git-fork-button.png)
+![CSC fork button](./assets/csc-git-fork-button.png)
 
 Now click the arrow directly to the right of the `fork` button. Once the arrow has been pressed, you should see this:
 
-![CSC fork button pushed](./Assets/csc-fork-button-pressed.png)
+![CSC fork button pushed](./assets/csc-fork-button-pressed.png)
 
 Click on the `+ Create a new fork`. Once you do that, your screen should be looking at this:
 
-![fork screen](./Assets/fork-screen.png)
+![fork screen](./assets/fork-screen.png)
 
 Please change the `Repository name` to that of you and your group member, for example, `Tanner_Van-Es--Eli_Blume.` Leave everything else the same and press the `Create Fork` button.
 
@@ -62,7 +62,7 @@ cd ClassProject
 
 That created a new directory named ClassProject which you will work out of. We need to clone a copy of our Git repository to work directly with it. To do that, press the following `code` button on the front page of your newly Forked repo:
 
-![code button](./Assets/code-button-clone.png)
+![code button](./assets/code-button-clone.png)
 
 Ensure the `HTTPS` option is selected, then copy the link. The link should look something like this: 
 
@@ -126,7 +126,7 @@ At the start of each class you may want to sync your Forked repository with the 
 
 In order to do this press the `Sync fork` button that is located directly under the `Code` button you used to clone your Fork:
 
-![sync-fork button](./Assets/sync-fork-button.png)
+![sync-fork button](./assets/sync-fork-button.png)
 
 You should then see an option to sync the changes. After this is done, open PowerShell and run the following command:
 
@@ -144,7 +144,7 @@ You must run `git pull` in order to sync any changes made from the remote reposi
 
 If your group feels good about the code you have written and want to "submit" it, create a pull request. In order to do that look for the `Contribute` button directly to the left of the `Sync fork` button (as seen above). This will open a new screen:
 
-![creating-pull-request](./Assets/creating-pull-request.png)
+![creating-pull-request](./assets/creating-pull-request.png)
 
 A pull request is a way for you to request that your code be *pulled* into the main repository. As you can see, there is space for you to add a title and a description. Also note that at the bottom of the screen it shows all the commits and files changed that are apart of this pull request.
 
