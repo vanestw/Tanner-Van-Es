@@ -8,7 +8,7 @@
 
 [**Getting Started**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#getting-started)
 
-[**Creating a Fork**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#cloning-your-fork)
+[**Creating and Cloning Fork**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#creating-a-fork-of-the-main-repository)
 
 [**Understanding and Working with Git**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#understanding-and-working-with-git)
 
@@ -23,6 +23,8 @@
 [***Click here if you are using your own device***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
 
 *In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
+
+**In order to access PowerShell, press the windows button on your keyboard and type in `Windows PowerShell`, press enter and you will be faced with a blue screen and command line.**
 
 ## Getting Started
 
