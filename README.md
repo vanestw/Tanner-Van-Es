@@ -202,7 +202,7 @@ This is a very simple flowchart, but can help show what the `git add` and `git c
 
 This is a bit more complex, but shows more commands and what they are doing.
 
-**Ignore the entirety of `Stash`, it is not within the scope of this project.**
+#### ***Ignore the entirety of `Stash`, it is not within the scope of this project.***
 
 ![Git flowchart complex](./.assets/git-flowchart-complex.png)
 
