@@ -16,6 +16,8 @@
 
 [**Submitting Your Code**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#submitting-your-code)
 
+[**Flowcharts to Help Visualization**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume#flow-charts-to-help-visualize)
+
 [**Extraneous Resources**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#extraneous-git-resources)
 
 ## Instructions
@@ -196,11 +198,11 @@ brew install git
 
 This is a very simple flowchart, but can help show what the `git add` and `git commit` commands are doing with your code:
 
-[Git flowchart simple](./.assets/git-flowchart-not-complex.webp)
+![Git flowchart simple](./.assets/git-flowchart-not-complex.webp)
 
 This is a bit more complex, but shows more commands and what they are doing. **Ignore the entirety of `Stash`, it is not within the scope of this project.**
 
-[Git flowchart complex](./.assets/git-flowchart-complex.png)
+![Git flowchart complex](./.assets/git-flowchart-complex.png)
 
 ## Extraneous Git Resources
 
