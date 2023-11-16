@@ -1,4 +1,5 @@
 #include "sales.h"
+#include "customer.h"
 #include <vector>
 
 int main() {
