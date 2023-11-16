@@ -24,7 +24,7 @@
 
 [***Click here if you are using your own device***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
 
-*In this readme we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
+*In this README we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
 **In order to access PowerShell, press the windows button on your keyboard and type in `Windows PowerShell`, press enter and you will be faced with a blue screen and command line.**
 
@@ -65,7 +65,7 @@ Click on the `+ Create a new fork`. Once you do that, your screen should be look
 
 ![fork screen](./.assets/fork-screen.png)
 
-Please change the `Repository name` to that of you and your group member, for example, `Tanner_Van-Es--Eli_Blume.` Leave everything else the same and press the `Create Fork` button.
+Please change the `Repository name` to that of you and your group member, for example, `Tanner_Van-Es--Eli_Blume`. Leave everything else the same and press the `Create Fork` button.
 
 Perfect! Now, you have successfully created a Fork of the main repository. This newly created `Fork` is where you and your partner will be working.
 
@@ -202,7 +202,7 @@ This is a very simple flowchart, but can help show what the `git add` and `git c
 
 This is a bit more complex, but shows more commands and what they are doing.
 
-**Ignore the entirety of `Stash`, it is not within the scope of this project.**
+#### ***Ignore the entirety of `Stash`, it is not within the scope of this project.***
 
 ![Git flowchart complex](./.assets/git-flowchart-complex.png)
 
