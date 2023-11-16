@@ -6,23 +6,23 @@
 
 ### Topics Covered
 
-[**Getting Started**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#getting-started)
+[**Getting Started**](https://github.com/nschmidtfrcc/CSC1061FA23#getting-started)
 
-[**Creating and Cloning Fork**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#creating-a-fork-of-the-main-repository)
+[**Creating and Cloning Fork**](https://github.com/nschmidtfrcc/CSC1061FA23#creating-a-fork-of-the-main-repository)
 
-[**Understanding and Working with Git**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#understanding-and-working-with-git)
+[**Understanding and Working with Git**](https://github.com/nschmidtfrcc/CSC1061FA23#understanding-and-working-with-git)
 
-[**Syncing Your Fork with the Main Repository**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#syncing-your-fork-with-the-main-repository)
+[**Syncing Your Fork with the Main Repository**](https://github.com/nschmidtfrcc/CSC1061FA23#syncing-your-fork-with-the-main-repository)
 
-[**Submitting Your Code**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#submitting-your-code)
+[**Submitting Your Code**](https://github.com/nschmidtfrcc/CSC1061FA23#submitting-your-code)
 
-[**Flowcharts to Help Visualization**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume#flow-charts-to-help-visualize)
+[**Flowcharts to Help Visualization**](https://github.com/nschmidtfrcc/CSC1061FA23#flow-charts-to-help-visualize)
 
-[**Extraneous Resources**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#extraneous-git-resources)
+[**Extraneous Resources**](https://github.com/nschmidtfrcc/CSC1061FA23#extraneous-git-resources)
 
 ## Instructions
 
-[***Click here if you are using your own device***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#using-personal-device)
+[***Click here if you are using your own device***](https://github.com/nschmidtfrcc/CSC1061FA23#using-personal-device)
 
 *In this README we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
@@ -192,7 +192,7 @@ After Homebrew is installed, you need to install the Git package. To do so, just
 brew install git
 ```
 
-[***Click here to return to instructions***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#getting-started)
+[***Click here to return to instructions***](https://github.com/nschmidtfrcc/CSC1061FA23#getting-started)
 
 ## Flow Charts to Help Visualize
 
