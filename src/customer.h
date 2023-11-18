@@ -1,10 +1,12 @@
-#include "sales.h"
+#include <iostream>
+#include <string>
+using namespace std;
 
 class Customer {
 	string name;
 	string salesmanName;
 	string emailAddress;
-	int phoneNumbers;
+	int phoneNumber;
 	bool boughtCar;
 	string interestedVehicle;
 	string interestedModel;
@@ -15,11 +17,11 @@ public:
 	string GetSalesmanName();
 	void SetEmailAddress(string emailAddress);
 	string GetEmailAddresss();
-	void SetPhoneNumber(int phoneNumbers);
+	void SetPhoneNumber(int phoneNumber);
 	int GetPhoneNumber();
 	void SetBoughtCar(bool boughtCar);
 	bool GetBoughtCar();
-	void SetnterstedVehicle(string interestedVehicle);
+	void SetInterstedVehicle(string interestedVehicle);
 	string GetInterstedVehicle();
 	void SetInterestedModel(string interestedModel);
 	string GetInterestedModel();
