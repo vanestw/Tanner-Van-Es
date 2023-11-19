@@ -1,11 +1,12 @@
-#include "sales.h"
 #include "customer.h"
 #include <vector>
 
 int main() {
-	vector<Vehicle> vehiclesSold;
-	vector<Vehicle> vehiclesOnLot;
-	vector<Customer> customers;
+	Customer customer1;
+	Customer customer("Eli", "555-555-5555", "eli@eli.com");
+	customer1.SetInfo();
+
+	customer.PrintInfo();
 
 	return 0;
 }

@@ -9,8 +9,11 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wfloat-equal -Wundef -Wca
 
 # Path settings
 set(SRC_PATH src)
+<<<<<<< HEAD
 #set(OBJ_PATH ../obj)
 #set(BIN_PATH ../bin)
+=======
+>>>>>>> f8c0f6e (Starting to work on methods. Added SetInfo and PrintInfo... only with very basic stuff to get it working first.)
 
 # Add main target
 file(GLOB MAIN_SOURCES "${SRC_PATH}/*.cpp")
