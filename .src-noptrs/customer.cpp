@@ -12,7 +12,7 @@ Customer::Customer(string n, string pn, string ea, bool interested) {
 	this->SetEmailAddress(ea);
 	this->SetIsInterested(interested);
 
-	this->GetVector().emplace_back(this);
+	this->GetVector().emplace_back(*this);
 }
 
 Customer::Customer(const Customer& other) {
@@ -20,18 +20,10 @@ Customer::Customer(const Customer& other) {
     this->name = other.name;
     this->phoneNumber = other.phoneNumber;
     this->emailAddress = other.emailAddress;
-	this->isInterested = other.isInterested;
 }
 
-Customer::~Customer() {
-	for(Customer* cus : GetVector()) {
-		delete cus; 
-	}
-	cout << "DESTRUCTOR CALLED" << endl;
-}
-
-vector<Customer*>& Customer::GetVector() const {
-	static vector<Customer*> vecCustomers;
+vector<Customer>& Customer::GetVector() const {
+	static vector<Customer> vecCustomers;
 	return vecCustomers;
 }
 
@@ -46,13 +38,13 @@ void Customer::FindCurrentCustomer() const {
 
 void Customer::PrintInfo() const {
 	for(size_t i = 0; i < GetVector().size(); i++) { 
-		cout << "Name: " << GetVector().at(i)->GetName() << endl;
-		cout << "Phone number: " << GetVector().at(i)->GetPhoneNumber() << endl;
-		cout << "Email address: " << GetVector().at(i)->GetEmailAddresss() << endl;
-		if(GetVector().at(i)->GetIsInterested() == 1) {
-			cout << "Is interested: true" <<  endl;
+		cout << "Name: " << GetVector().at(i).GetName() << endl;
+		cout << "Phone number: " << GetVector().at(i).GetPhoneNumber() << endl;
+		cout << "Email address: " << GetVector().at(i).GetEmailAddresss() << endl;
+		if(GetVector().at(i).GetIsInterested() == 0) { 
+			cout << "Is interested: true" << endl;
 		} else {
-			cout << "Is interested: false" <<  endl;
+			cout << "Is interested: false" << endl;
 		}
 
 		if(i != GetVector().size() - 1) { 
@@ -63,6 +55,7 @@ void Customer::PrintInfo() const {
 
 // This method is so basic... just getting the most basic logic working... FIXME CHANGE THIS ALL OF COURSE ESPECIALLY THE CHECKING IF INTERESTED PART.
 void Customer::SetInfo() {
+	cout << "Vector size on top of SetInfo(): " << this->GetVector().size() << endl;
 	string n, pn, ea;
 	char inter;
 	bool interested = false;
@@ -84,7 +77,7 @@ void Customer::SetInfo() {
 		}
 	this->SetIsInterested(interested);
 
-	this->GetVector().emplace_back(this);
+	this->GetVector().emplace_back(*this);
 }
 
 

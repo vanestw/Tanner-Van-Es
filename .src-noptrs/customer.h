@@ -12,14 +12,12 @@ class Customer {
 	bool isInterested;
 	string interestedVehicle;
 	string interestedModel;
-	// static vector<Customer*> vecCustomers;
+	// static vector<Customer> vecCustomers;
 public:
 	Customer();
 	Customer(string n, string pn, string ea, bool interested);
 	Customer(const Customer& other);
-	~Customer();
-
-	vector<Customer*>& GetVector() const;
+	vector<Customer>& GetVector() const;
 	void SetInfo();
 	void PrintInfo() const;
 
