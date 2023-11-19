@@ -1,7 +1,6 @@
 #include "customer.h"
 #include <utility>
 
-vector<Customer> Customer::vecCustomers;
 
 Customer::Customer() {
 	this->name = "NO NAME";
@@ -12,7 +11,7 @@ Customer::Customer(string n, string pn, string ea) {
 	this->SetPhoneNumber(pn);
 	this->SetEmailAddress(ea);
 
-	vecCustomers.emplace_back(*this);
+	this->GetVector().emplace_back(this);
 }
 
 Customer::Customer(const Customer& other) {
@@ -20,6 +19,11 @@ Customer::Customer(const Customer& other) {
     this->name = other.name;
     this->phoneNumber = other.phoneNumber;
     this->emailAddress = other.emailAddress;
+}
+
+vector<Customer*>& Customer::GetVector() const {
+	static vector<Customer*> vecCustomers;
+	return vecCustomers;
 }
 
 // TODO: Write these methods
@@ -32,19 +36,24 @@ void Customer::FindCurrentCustomer() const {
 }
 
 void Customer::PrintInfo() const {
-	for(size_t i = 0; i < vecCustomers.size(); i++) { 
-		cout << "Name: " << vecCustomers.at(i).GetName() << endl;
-		cout << "Phone number: " << vecCustomers.at(i).GetPhoneNumber() << endl;
-		cout << "Email address: " << vecCustomers.at(i).GetEmailAddresss() << endl;
+	for(size_t i = 0; i < GetVector().size(); i++) { 
+		cout << "Name: " << GetVector().at(i)->GetName() << endl;
+		cout << "Phone number: " << GetVector().at(i)->GetPhoneNumber() << endl;
+		cout << "Email address: " << GetVector().at(i)->GetEmailAddresss() << endl;
+		cout << "Is interested: " << GetVector().at(i)->GetIsInterested() << endl;
 
-		if(i != vecCustomers.size() - 1) { 
+		if(i != GetVector().size() - 1) { 
 		cout << endl;
 		}
 	}
 }
 
+// This method is so basic... just getting the most basic logic working... FIXME CHANGE THIS ALL OF COURSE ESPECIALLY THE CHECKING IF INTERESTED PART.
 void Customer::SetInfo() {
+	cout << "Vector size on top of SetInfo(): " << this->GetVector().size() << endl;
 	string n, pn, ea;
+	char inter;
+	bool interested = false;
 	cout << "Plese enter your first and last name:" << endl;
 	getline(cin, n);
 	this->SetName(n);
@@ -54,13 +63,29 @@ void Customer::SetInfo() {
 	cout << "PLease enter your email address:" << endl;
 	getline(cin, ea);
 	this->SetEmailAddress(ea);
+	cout << "Type 'y' if you are you interested in buying a car?" << endl;
+	cin >> inter;
+		if(inter != 'y') {
+			interested = false;	
+		} else { 
+			interested = true;
+		}
+	this->SetIsInterested(interested);
 
-	vecCustomers.emplace_back(*this);
+	this->GetVector().emplace_back(this);
 }
 
 
 // ALL SETTERS AND GETTERS BELOW
 //
+
+void Customer::SetIsInterested(bool interested) {
+	this->isInterested = interested;	
+}
+
+bool Customer::GetIsInterested() {
+	return isInterested;
+}
 
 void Customer::SetName(string n) { 
 	this->name = n;
