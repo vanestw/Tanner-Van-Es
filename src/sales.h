@@ -18,3 +18,5 @@ public:
 	void PrintWeekSales();
 	void PrintMonthSales();
 };
+
+

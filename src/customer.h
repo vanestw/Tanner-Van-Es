@@ -16,13 +16,13 @@ public:
 	void SetSalesmanName(string salesmanName);
 	string GetSalesmanName();
 	void SetEmailAddress(string emailAddress);
-	string GetEmailAddresss();
+	string GetEmailAddress();
 	void SetPhoneNumber(int phoneNumber);
-	int GetPhoneNumber();
+	int GetPhoneNumber() const;
 	void SetBoughtCar(bool boughtCar);
-	bool GetBoughtCar();
-	void SetInterstedVehicle(string interestedVehicle);
-	string GetInterstedVehicle();
+	bool GetBoughtCar() const;
+	void SetInterestedVehicle(string interestedVehicle);
+	string GetInterestedVehicle() const;
 	void SetInterestedModel(string interestedModel);
 	string GetInterestedModel();
 	void PrintInfo();

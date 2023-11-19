@@ -1,5 +1,7 @@
 #include "customer.h"
 
+#include <utility>
+
 
 // TODO: Write these methods
 void FindInterestedCustomer() {
@@ -20,8 +22,8 @@ void PrintInfo() {
 
 // ALL SETTERS AND GETTERS BELOW
 //
-void Customer::SetName(string name) { 
-	this->name = name;
+void Customer::SetName(string name) {
+	this->name = std::move(name);
 }
 
 string Customer::GetName() {
@@ -29,7 +31,7 @@ string Customer::GetName() {
 }
 
 void Customer::SetSalesmanName(string salesmanName) {
-	this->salesmanName = salesmanName;
+	this->salesmanName = std::move(salesmanName);
 }
 
 string Customer::GetSalesmanName() {
@@ -37,10 +39,10 @@ string Customer::GetSalesmanName() {
 }
 
 void Customer::SetEmailAddress(string emailAddress) {
-	this->emailAddress = emailAddress;
+	this->emailAddress = std::move(emailAddress);
 }
 
-string Customer::GetEmailAddresss() {
+string Customer::GetEmailAddress() {
 	return emailAddress;
 }
 
@@ -48,7 +50,7 @@ void Customer::SetPhoneNumber(int phoneNumber) {
 	this->phoneNumber = phoneNumber;
 }
 
-int Customer::GetPhoneNumber() {
+int Customer::GetPhoneNumber() const {
 	return phoneNumber;
 }
 
@@ -56,20 +58,20 @@ void Customer::SetBoughtCar(bool boughtCar) {
 	this->boughtCar = boughtCar;
 }
 
-bool Customer::GetBoughtCar() {
+bool Customer::GetBoughtCar() const {
 	return boughtCar;
 }
 
-void Customer::SetInterstedVehicle(string interestedVehicle) {
-	this->interestedVehicle = interestedVehicle;
+void Customer::SetInterestedVehicle(string interestedVehicle) {
+	this->interestedVehicle = std::move(interestedVehicle);
 }
 
-string Customer::GetInterstedVehicle() {
+string Customer::GetInterestedVehicle() const{
 	return interestedVehicle;
 }
 
 void Customer::SetInterestedModel(string interestedModel) {
-	this->interestedModel = interestedModel;
+	this->interestedModel = std::move(interestedModel);
 }
 
 string Customer::GetInterestedModel() {
