@@ -13,26 +13,6 @@ class Customer {
 	string interestedModel;
 	static vector<Customer> vecCustomers;
 public:
-<<<<<<< HEAD
-	void SetName(string name);
-	string GetName();
-	void SetSalesmanName(string salesmanName);
-	string GetSalesmanName();
-	void SetEmailAddress(string emailAddress);
-	string GetEmailAddress();
-	void SetPhoneNumber(int phoneNumber);
-	int GetPhoneNumber() const;
-	void SetBoughtCar(bool boughtCar);
-	bool GetBoughtCar() const;
-	void SetInterestedVehicle(string interestedVehicle);
-	string GetInterestedVehicle() const;
-	void SetInterestedModel(string interestedModel);
-	string GetInterestedModel();
-	void PrintInfo();
-	void FindInterestedCustomer();
-	void FindCurrentCustomer();
-	void PrintCustomer();
-=======
 	Customer();
 	Customer(string n, string pn, string ea);
 	Customer(const Customer& other);
@@ -54,5 +34,4 @@ public:
 	string GetInterestedModel() const;
 	void FindInterestedCustomer() const;
 	void FindCurrentCustomer() const;
->>>>>>> f8c0f6e (Starting to work on methods. Added SetInfo and PrintInfo... only with very basic stuff to get it working first.)
 };
