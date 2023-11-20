@@ -12,7 +12,6 @@ class Customer {
 	bool isInterested;
 	string interestedVehicle;
 	string interestedModel;
-	// static vector<Customer*> vecCustomers;
 public:
 	Customer();
 	Customer(string n, string pn, string ea, bool interested);

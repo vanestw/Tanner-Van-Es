@@ -1,12 +1,13 @@
 #include "customer.h"
-#include <utility>
 
 
 Customer::Customer() {
+	cout << "CONSTRUCTOR CALLED" << endl;
 	this->name = "NO NAME";
 }
 
 Customer::Customer(string n, string pn, string ea, bool interested) {
+	cout << "PARAM CONSTRUCTOR CALLED" << endl;
 	this->SetName(n);
 	this->SetPhoneNumber(pn);
 	this->SetEmailAddress(ea);
@@ -16,17 +17,22 @@ Customer::Customer(string n, string pn, string ea, bool interested) {
 }
 
 Customer::Customer(const Customer& other) {
-    // Copy all member variables
+	cout << "COPY CONSTRUCTOR CALLED" << endl;
     this->name = other.name;
     this->phoneNumber = other.phoneNumber;
     this->emailAddress = other.emailAddress;
 	this->isInterested = other.isInterested;
 }
 
+// FIXME: Can't get this to not infinitely loop
+// Customer::~Customer() {
+// 	cout << "DESTRUCTOR CALLED" << endl;
+//     for (Customer* customer : GetVector()) {
+//             delete customer;
+//     }
+// }
+
 Customer::~Customer() {
-	for(Customer* cus : GetVector()) {
-		delete cus; 
-	}
 	cout << "DESTRUCTOR CALLED" << endl;
 }
 
@@ -63,18 +69,19 @@ void Customer::PrintInfo() const {
 
 // This method is so basic... just getting the most basic logic working... FIXME CHANGE THIS ALL OF COURSE ESPECIALLY THE CHECKING IF INTERESTED PART.
 void Customer::SetInfo() {
+	Customer* newCustomer = new Customer();
 	string n, pn, ea;
 	char inter;
 	bool interested = false;
 	cout << "Plese enter your first and last name:" << endl;
 	getline(cin, n);
-	this->SetName(n);
+	newCustomer->SetName(n);
 	cout << "Please enter your phone number:" << endl;
 	getline(cin, pn);
-	this->SetPhoneNumber(pn);
+	newCustomer->SetPhoneNumber(pn);
 	cout << "PLease enter your email address:" << endl;
 	getline(cin, ea);
-	this->SetEmailAddress(ea);
+	newCustomer->SetEmailAddress(ea);
 	cout << "Type 'y' if you are you interested in buying a car?" << endl;
 	cin >> inter;
 		if(inter != 'y') {
@@ -82,9 +89,9 @@ void Customer::SetInfo() {
 		} else { 
 			interested = true;
 		}
-	this->SetIsInterested(interested);
+	newCustomer->SetIsInterested(interested);
 
-	this->GetVector().emplace_back(this);
+	GetVector().emplace_back(newCustomer);
 }
 
 
