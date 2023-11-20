@@ -43,7 +43,7 @@ public:
 	void BuyCar();
 
 // File Stuff
-	// void OpenFile();
+	void OpenFile();
 	// void CloseFile();
 
 // Methods To Write

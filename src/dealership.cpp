@@ -1,4 +1,5 @@
 #include "dealership.h"
+#include <iomanip>
 
 Dealership::Dealership() {
 	cout << "DEALERSHIP CONSTRUCTOR CALLED" << endl;
@@ -186,52 +187,65 @@ void Dealership::BuyCar() {
 	}
 } // ends BuyCar()
 
-
-
-
-
-
-
-
-
-
-
-
-
 // TODO
-// void Dealership::OpenFile() {
-// auto line;
-// 	vecVehicles.clear();
-// 	vecCustomers.clear();
-// 	vecSales.clear();
-//
-// 	while(getline(inputFile, line)) {
-// 		if(line == "Vehicles:") {
-// 			while(getline(inputFile, line) && !line.empty()) {
-// 				AddVehicle(line);
-// 			} // ends while
-// 				vecVehicles.emplace_back(vehicle);
-// 		} // ends if
-// 	} // ends while
-//
-// 	inputFile.close();
-// } // ends OpenFile()
+void Dealership::OpenFile() {
+    string name, pn, ea, iv, im, line, boughtStr, interestedStr;
+    bool interested = false, bought = false, customerDataComplete = false;
+
+    vecCustomers.clear();
+    vecVehicles.clear();
+    vecSales.clear();
+
+    inputFile.open(filename);
+    if(!inputFile.is_open()) {
+        cerr << filename << " unable to open!" << endl;
+        return;
+    }
+    while(inputFile >> line) {
+        if(line == "Customers:") {
+			inputFile >> ws; // get rid of leading whitespace
+            while (getline(inputFile, line) && !line.empty() && line != "Vehicles:") {
+                if (line == "Name:") { 
+                    getline(inputFile, name);
+				} else if (line == "Phone:") { 
+                    getline(inputFile, pn);
+				} else if (line == "Email:") { 
+                    getline(inputFile, ea);
+                } else if (line == "Interested:") { 
+                    getline(inputFile, interestedStr);
+                } else if (line == "Bought:") { 
+                    getline(inputFile, boughtStr);
+				} else if (line == "Vehicle:") { 
+                    getline(inputFile, iv);
+				} else if (line == "Model:") { 
+                    getline(inputFile, im);
+				} // ends if
+            istringstream(interestedStr) >> interested;
+            istringstream(boughtStr) >> bought;
+
+			if(!customerDataComplete) { 
+				AddCustomer(name, pn, ea, interested, bought, iv, im);
+				customerDataComplete = true;
+			} // ends if
+            } // ends while
+        } // ends if
+		  customerDataComplete = false;
+    } // ends while
+
+    inputFile.close();
+} // ends OpenFile()
 //
 // void Dealership::CloseFile() {
 // auto line;
-//         outputFile << "Vehicles:" << endl;
-// 		for(Vehicle* vehicle : vecVehicles) { 
-// 			if(vehicle != nullptr) { 
-//             outputFile << vehicle->GetYear() << '\n';
-//             outputFile << vehicle->GetMake() << '\n';
-//             outputFile << vehicle->GetModel() << '\n';
-//             outputFile << vehicle->GetColor() << '\n';
-//             outputFile << vehicle->GetDaysOnLot() << '\n';
-//             outputFile << vehicle->GetPrice() << '\n';
-//             outputFile << vehicle->GetVin() << '\n';
-// 			} else {
-// 				cerr << "Null vehicle ptr." << endl;
-// 			} // ends if
-//         } // ends for
+//	outputFile << "Customers:" << endl;
+//		for(Customer* customer : vecCustomers) {
+//			outputFile << customer->GetName() << endl;
+//			outputFile << customer->GetPhoneNumber() << endl;
+//			outputFile << customer->GetEmailAddress() << endl;
+//			outputFile << customer->GetInterested() << endl;
+//			outputFile << customer->GetBoughtCar() << endl;
+//			outputFile << customer->GetInterestedVehicle() << endl;
+//			outputFile << customer->GetInterestedModel() << endl;
+//		}
 //         outputFile.close();
 // } // ends CloseFile()
