@@ -50,11 +50,18 @@ void Customer::FindInterestedCustomer() const {
 
 }
 
-void Customer::FindCurrentCustomer() const {
-
+void Customer::FindCurrentCustomer(string nameToFind) const {
+	for(Customer* i : GetVector()) {
+		if(nameToFind == i->GetName()) {
+			cout << endl << "Searching for " << nameToFind << "..." << endl;
+			cout << "Here's " << nameToFind << "'s info:" << endl;
+			i->PrintInfo(i);
+		}
+	}
 }
 
 void Customer::PrintInfo() const {
+	cout << endl << "Everyone in database: " << endl;
 	for(size_t i = 0; i < GetVector().size(); i++) { 
 		cout << "Name: " << GetVector().at(i)->GetName() << endl;
 		cout << "Phone number: " << GetVector().at(i)->GetPhoneNumber() << endl;
@@ -70,7 +77,19 @@ void Customer::PrintInfo() const {
 	}
 }
 
-// This method is so basic... just getting the most basic logic working... FIXME CHANGE THIS ALL OF COURSE ESPECIALLY THE CHECKING IF INTERESTED PART.
+void Customer::PrintInfo(Customer* obj) {
+		cout << "Name: " << obj->GetName() << endl;
+		cout << "Phone number: " << obj->GetPhoneNumber() << endl;
+		cout << "Email address: " << obj->GetEmailAddresss() << endl;
+		cout << "Is interested: " << boolalpha << obj->GetIsInterested() <<  endl;
+		cout << "Bought car: " << boolalpha << obj->GetBoughtCar() << endl;
+		cout << "Vehicle interested in: " << obj->GetInterstedVehicle() << endl;
+		cout << "Vehicle model interested in: " << obj->GetInterestedModel() << endl;
+
+}
+
+// FIXME THIS IS A TERRIBLE WAY TO GET THE DATA FROM USER. CHANGE THIS. I HAVE IT LIKE THIS TO EASILY GET LOGIC WORKING AND WHILE WE FIGURE OUT A BETTER WAY TO GET DATA FROM USER!!
+	// CHANGE THIS ALL OF COURSE ESPECIALLY THE CHECKING IF INTERESTED PART. FIXME
 void Customer::SetInfo() {
 	Customer* newCustomer = new Customer();
 	string n, pn, ea;

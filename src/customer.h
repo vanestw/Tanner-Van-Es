@@ -21,6 +21,9 @@ public:
 	vector<Customer*>& GetVector() const;
 	void SetInfo();
 	void PrintInfo() const;
+	void PrintInfo(Customer* obj);
+	void FindInterestedCustomer() const;
+	void FindCurrentCustomer(string nameToFind) const;
 
 	void SetName(string n);
 	string GetName() const;
@@ -42,9 +45,6 @@ public:
 
 	void SetInterestedModel(string im);
 	string GetInterestedModel() const;
-
-	void FindInterestedCustomer() const;
-	void FindCurrentCustomer() const;
 
 	void SetIsInterested(bool interested);
 	bool GetIsInterested();
