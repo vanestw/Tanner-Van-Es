@@ -13,37 +13,31 @@ class Customer {
 	string interestedVehicle;
 	string interestedModel;
 public:
-	Customer();
-	Customer(string n, string pn, string ea, bool interested, bool bought, string vi, string vmi);
-	Customer(const Customer& other);
+	// Constructors and Destructor
+	Customer(); 
+	Customer(const string& n, const string& pn, const string& ea, bool interested, bool bought, const string& vi, const string& vmi);
 	~Customer();
 
-	vector<Customer*>& GetVector() const;
-	void SetInfo();
-	void PrintInfo() const;
-	void PrintInfo(Customer* obj);
-	void FindInterestedCustomer() const;
-	void FindCurrentCustomer(string nameToFind) const;
-
-	void SetName(string n);
+	// Setters and Getters
+	void SetName(const string& n);
 	string GetName() const;
 
-	void SetSalesmanName(string sn);
+	void SetSalesmanName(const string& sn);
 	string GetSalesmanName() const;
 
-	void SetEmailAddress(string ea);
+	void SetEmailAddress(const string& ea);
 	string GetEmailAddresss() const;
 
-	void SetPhoneNumber(string pn);
+	void SetPhoneNumber(const string& pn);
 	string GetPhoneNumber() const;
 
 	void SetBoughtCar(bool bc);
 	bool GetBoughtCar() const;
 
-	void SetInterstedVehicle(string iv);
+	void SetInterstedVehicle(const string& iv);
 	string GetInterstedVehicle() const;
 
-	void SetInterestedModel(string im);
+	void SetInterestedModel(const string& im);
 	string GetInterestedModel() const;
 
 	void SetIsInterested(bool interested);
