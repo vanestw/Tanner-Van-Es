@@ -14,7 +14,7 @@ class Customer {
 	string interestedModel;
 public:
 	Customer();
-	Customer(string n, string pn, string ea, bool interested);
+	Customer(string n, string pn, string ea, bool interested, bool bought, string vi, string vmi);
 	Customer(const Customer& other);
 	~Customer();
 

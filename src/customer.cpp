@@ -1,4 +1,5 @@
 #include "customer.h"
+#include <bits/stdc++.h>
 
 
 Customer::Customer() {
@@ -6,12 +7,15 @@ Customer::Customer() {
 	this->name = "NO NAME";
 }
 
-Customer::Customer(string n, string pn, string ea, bool interested) {
+Customer::Customer(string n, string pn, string ea, bool interested, bool bought, string vi, string vmi) {
 	cout << "PARAM CONSTRUCTOR CALLED" << endl;
 	this->SetName(n);
 	this->SetPhoneNumber(pn);
 	this->SetEmailAddress(ea);
 	this->SetIsInterested(interested);
+	this->SetBoughtCar(bought);
+	this->SetInterstedVehicle(vi);
+	this->SetInterestedModel(vmi);
 
 	this->GetVector().emplace_back(this);
 }
@@ -55,11 +59,10 @@ void Customer::PrintInfo() const {
 		cout << "Name: " << GetVector().at(i)->GetName() << endl;
 		cout << "Phone number: " << GetVector().at(i)->GetPhoneNumber() << endl;
 		cout << "Email address: " << GetVector().at(i)->GetEmailAddresss() << endl;
-		if(GetVector().at(i)->GetIsInterested() == 1) {
-			cout << "Is interested: true" <<  endl;
-		} else {
-			cout << "Is interested: false" <<  endl;
-		}
+		cout << "Is interested: " << boolalpha << GetVector().at(i)->GetIsInterested() <<  endl;
+		cout << "Bought car: " << boolalpha << GetVector().at(i)->GetBoughtCar() << endl;
+		cout << "Vehicle interested in: " << GetVector().at(i)->GetInterstedVehicle() << endl;
+		cout << "Vehicle model interested in: " << GetVector().at(i)->GetInterestedModel() << endl;
 
 		if(i != GetVector().size() - 1) { 
 		cout << endl;
@@ -71,7 +74,7 @@ void Customer::PrintInfo() const {
 void Customer::SetInfo() {
 	Customer* newCustomer = new Customer();
 	string n, pn, ea;
-	char inter;
+	char x;
 	bool interested = false;
 	cout << "Plese enter your first and last name:" << endl;
 	getline(cin, n);
@@ -82,21 +85,41 @@ void Customer::SetInfo() {
 	cout << "PLease enter your email address:" << endl;
 	getline(cin, ea);
 	newCustomer->SetEmailAddress(ea);
-	cout << "Type 'y' if you are you interested in buying a car?" << endl;
-	cin >> inter;
-		if(inter != 'y') {
+	cout << "Type 'y' if you are you interested in buying a car." << endl;
+	cin >> x;
+		if(x != 'y') {
 			interested = false;	
 		} else { 
 			interested = true;
 		}
 	newCustomer->SetIsInterested(interested);
+	cout << "Type 'y' if you have bought a car." << endl;
+	bool bought;
+	cin >> x;
+	cin.clear();
+	cin.ignore(numeric_limits<streamsize>::max(), '\n'); // completely clears input buffer
+		if(x != 'y') {
+			bought = false;	
+		} else { 
+			bought = true;
+		}
+	newCustomer->SetBoughtCar(bought);
+
+	cout << "What vehicle are you interested in?" << endl;
+	string iv;
+	getline(cin, iv);
+	newCustomer->SetInterstedVehicle(iv);
+	
+	cout << "What model of the " << iv << " are you interested in?" << endl;
+	string model;
+	getline(cin, model); 
+	newCustomer->SetInterestedModel(model);
 
 	GetVector().emplace_back(newCustomer);
 }
 
 
 // ALL SETTERS AND GETTERS BELOW
-//
 
 void Customer::SetIsInterested(bool interested) {
 	this->isInterested = interested;	
