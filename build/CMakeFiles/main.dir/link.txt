@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Wfloat-equal -Wundef -Wcast-align -Wwrite-strings -Wlogical-op -Wmissing-declarations -Wredundant-decls -Wshadow -Woverloaded-virtual CMakeFiles/main.dir/src/customer.cpp.o CMakeFiles/main.dir/src/dealership.cpp.o CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/src/sales.cpp.o CMakeFiles/main.dir/src/vehicle.cpp.o -o main 
