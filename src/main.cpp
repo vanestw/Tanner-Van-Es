@@ -4,6 +4,7 @@
 int main() {
 	Dealership dealership;
 	Customer* customer = new Customer("Eli", "555-555-5555", "eli@eli.com", true, false, "Ford", "Fiesta");
+	Vehicle* vehicle = new Vehicle(2023, "Rolls-Royce", "Phantom", "White", 30, 500000, "RR456789XYZ123");
 
 	dealership.AddCustomer(customer);
 	dealership.AddCustomer("Zara", "420-6969-CUTIE", "zara@zara.com", true, false, "Cat Mobile", "Cuteness");
@@ -18,6 +19,8 @@ int main() {
 	cout << endl;
 
 	dealership.AddVehicle(2003, "Subaru", "Forester", "Black", 123, 23000, "ABC123456789XYZ");
+	dealership.AddVehicle(vehicle);
+	cout << "Vehicle info: " << endl;
 	dealership.PrintVehicleInfo();
 
 	cout << endl;
@@ -25,4 +28,4 @@ int main() {
 	dealership.SearchForVehicle("ABC123456789XYZ");
 
 	return 0;
-}
+} // ends main()

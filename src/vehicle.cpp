@@ -1,12 +1,9 @@
 #include "vehicle.h"
 
+// Constructors and Destructor
 Vehicle::Vehicle() {
 	cout << "VEHICLE DEFAULT CONSTRUCTOR CALLED" << endl;
-}
-
-Vehicle::~Vehicle() {
-	cout << "VEHICLE DESTRUCTOR CALLED" << endl;
-}
+} // ends Vehicle()
 
 Vehicle::Vehicle(const int& yearCon, const string& makeCon, const string& modelCon, const string& colorCon, const int& daysOnLotCon, const double& priceCon, const string& vinCon) {
 	this->SetYear(yearCon);
@@ -16,9 +13,13 @@ Vehicle::Vehicle(const int& yearCon, const string& makeCon, const string& modelC
 	this->SetDaysOnLot(daysOnLotCon);
 	this->SetPrice(priceCon);
 	this->SetVin(vinCon);
-}
+} // ends paramaterized Vehicle()
 
-// Setters and Getters
+Vehicle::~Vehicle() {
+	cout << "VEHICLE DESTRUCTOR CALLED" << endl;
+} // ends ~Vehicle()
+
+// ALL SETTERS AND GETTERS
 void Vehicle::SetYear(const int& yearSet) {
 	this->year = yearSet;
 }

@@ -1,11 +1,10 @@
 #include "customer.h"
-#include <bits/stdc++.h>
 
-
+// Constructors and Destructor
 Customer::Customer() {
 	cout << "CUSTOMER CONSTRUCTOR CALLED" << endl;
 	this->name = "NO NAME";
-}
+} // ends Customer()
 
 Customer::Customer(const string& n, const string& pn, const string& ea, bool interested, bool bought, const string& vi, const string& vmi) {
 	cout << "CUSTOMER PARAMATERIZED CONSTRUCTOR CALLED" << endl;
@@ -16,14 +15,13 @@ Customer::Customer(const string& n, const string& pn, const string& ea, bool int
 	this->SetBoughtCar(bought);
 	this->SetInterstedVehicle(vi);
 	this->SetInterestedModel(vmi);
-}
+} // ends paramaterized Customer()
 
 Customer::~Customer() {
 	cout << "CUSTOMER DESTRUCTOR CALLED" << endl;
-}
+} // ends ~Customer()
 
-// ALL SETTERS AND GETTERS BELOW
-
+// ALL SETTERS AND GETTERS 
 void Customer::SetIsInterested(bool interested) {
 	this->isInterested = interested;	
 }
