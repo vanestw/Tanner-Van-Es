@@ -14,7 +14,6 @@ Price:
 VIN:
 ABC123456789
 
-
 Vehicle
 Year:
 2021
@@ -31,7 +30,6 @@ Price:
 VIN:
 DEF987654321
 
-
 Vehicle
 Year:
 2023
@@ -47,5 +45,4 @@ Price:
 28000
 VIN:
 GHI456789012
-
 

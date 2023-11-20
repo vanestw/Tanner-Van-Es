@@ -44,11 +44,9 @@ public:
 	void OpenFile();
 	void SaveToFile();
 
-// IDK
+// TMP METHODS
 	void BuyCar();
 
 // Methods To Write
     void FindInterestedCustomer() const;
-
-
 };

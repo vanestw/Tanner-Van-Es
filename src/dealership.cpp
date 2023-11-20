@@ -38,7 +38,6 @@ void Dealership::PrintCustomerInfo() const {
 		cout << "Bought car: " << boolalpha << vecCustomers.at(i)->GetBoughtCar() << endl;
 		cout << "Vehicle interested in: " << vecCustomers.at(i)->GetInterstedVehicle() << endl;
 		cout << "Vehicle model interested in: " << vecCustomers.at(i)->GetInterestedModel() << endl;
-
 		if(i != vecCustomers.size() - 1) {
 			cout << endl;
 		} // ends if
@@ -128,6 +127,7 @@ void Dealership::PrintVehicleInfo() const {
 			cout << endl;
 		} // ends if
 	} // ends for
+
 } // ends PrintVehicleInfo()
 
 // The same as PrintCustomerInfo above
@@ -160,7 +160,6 @@ void Dealership::PrintSalesInfo() const {
 			cout << "Sales by week: " << vecSales.at(i)->GetSalesByWeek() << endl;
 			cout << "Sales by month: " << vecSales.at(i)->GetSalesByMonth() << endl;
 			cout << "Salesman: " << vecSales.at(i)->GetSalesmanName() << endl;
-
 			if(i != vecCustomers.size() - 1) {
 				cout << endl;
 			} // ends if
