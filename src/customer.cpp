@@ -8,14 +8,35 @@ Customer::Customer() {
 
 Customer::Customer(const string& n, const string& pn, const string& ea, bool interested, bool bought, const string& vi, const string& vmi) {
 	cout << "CUSTOMER PARAMATERIZED CONSTRUCTOR CALLED" << endl;
-	this->SetName(n);
-	this->SetPhoneNumber(pn);
-	this->SetEmailAddress(ea);
-	this->SetIsInterested(interested);
-	this->SetBoughtCar(bought);
-	this->SetInterstedVehicle(vi);
-	this->SetInterestedModel(vmi);
+	name = n;
+	phoneNumber = pn;
+	emailAddress = ea;
+	isInterested = interested;
+	boughtCar = bought;
+	interestedVehicle = vi;
+	interestedModel = vmi;
 } // ends paramaterized Customer()
+
+// Customer::Customer(const string& n, const string& pn, const string& ea, bool interested, bool bought, const string& vi, const string& vmi) {
+// 	cout << "CUSTOMER PARAMATERIZED CONSTRUCTOR CALLED" << endl;
+// 	this->SetName(n);
+// 	this->SetPhoneNumber(pn);
+// 	this->SetEmailAddress(ea);
+// 	this->SetIsInterested(interested);
+// 	this->SetBoughtCar(bought);
+// 	this->SetInterstedVehicle(vi);
+// 	this->SetInterestedModel(vmi);
+// } // ends paramaterized Customer()
+
+Customer::Customer(Customer* other) {
+	name = other->name;
+	phoneNumber = other->phoneNumber;
+	emailAddress = other->emailAddress;
+	isInterested = other->isInterested;
+	boughtCar = other->boughtCar;
+	interestedVehicle = other->interestedVehicle;
+	interestedModel = other->interestedModel;
+}
 
 Customer::~Customer() {
 	cout << "CUSTOMER DESTRUCTOR CALLED" << endl;
@@ -26,7 +47,7 @@ void Customer::SetIsInterested(bool interested) {
 	this->isInterested = interested;	
 }
 
-bool Customer::GetIsInterested() {
+bool Customer::GetIsInterested() const {
 	return isInterested;
 }
 

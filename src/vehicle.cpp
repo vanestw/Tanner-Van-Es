@@ -6,14 +6,34 @@ Vehicle::Vehicle() {
 } // ends Vehicle()
 
 Vehicle::Vehicle(const int& yearCon, const string& makeCon, const string& modelCon, const string& colorCon, const int& daysOnLotCon, const double& priceCon, const string& vinCon) {
-	this->SetYear(yearCon);
-	this->SetMake(makeCon);
-	this->SetModel(modelCon);
-	this->SetColor(colorCon);
-	this->SetDaysOnLot(daysOnLotCon);
-	this->SetPrice(priceCon);
-	this->SetVin(vinCon);
+	year = yearCon;
+	make = makeCon;
+	model = modelCon;
+	color = colorCon;
+	daysOnLot = daysOnLotCon;
+	price = priceCon;
+	vin = vinCon;
 } // ends paramaterized Vehicle()
+
+Vehicle::Vehicle(Vehicle* other) {
+	year = other->year;
+	make = other->make;
+	model = other->model;
+	color = other->color;
+	daysOnLot = other->daysOnLot;
+	price = other->price;
+	vin = other->vin;
+}
+
+// Vehicle::Vehicle(const int& yearCon, const string& makeCon, const string& modelCon, const string& colorCon, const int& daysOnLotCon, const double& priceCon, const string& vinCon) {
+// 	this->SetYear(yearCon);
+// 	this->SetMake(makeCon);
+// 	this->SetModel(modelCon);
+// 	this->SetColor(colorCon);
+// 	this->SetDaysOnLot(daysOnLotCon);
+// 	this->SetPrice(priceCon);
+// 	this->SetVin(vinCon);
+// } // ends paramaterized Vehicle()
 
 Vehicle::~Vehicle() {
 	cout << "VEHICLE DESTRUCTOR CALLED" << endl;
@@ -24,7 +44,7 @@ void Vehicle::SetYear(const int& yearSet) {
 	this->year = yearSet;
 }
 
-int Vehicle::GetYear() {
+int Vehicle::GetYear() const {
 	return year;
 }
 
@@ -32,7 +52,7 @@ void Vehicle::SetMake(const string& makeSet) {
 	this->make = makeSet;
 }
 
-string Vehicle::GetMake() {
+string Vehicle::GetMake() const {
 	return make;
 }
 
@@ -40,7 +60,7 @@ void Vehicle::SetModel(const string& modelSet) {
 	this->model = modelSet;
 }
 
-string Vehicle::GetModel() {
+string Vehicle::GetModel() const {
 	return model;
 }
 
@@ -48,7 +68,7 @@ void Vehicle::SetColor(const string& colorSet) {
 	this->color = colorSet;
 }
 
-string Vehicle::GetColor() {
+string Vehicle::GetColor() const {
 	return color;
 }
 
@@ -56,7 +76,7 @@ void Vehicle::SetDaysOnLot(const int& daysOnLotSet) {
 	this->daysOnLot = daysOnLotSet;
 }
 
-int Vehicle::GetDaysOnLot() {
+int Vehicle::GetDaysOnLot() const {
 	return daysOnLot;
 }
 
@@ -64,7 +84,7 @@ void Vehicle::SetPrice(const double& priceSet) {
 	this->price = priceSet;
 }
 
-double Vehicle::GetPrice() {
+double Vehicle::GetPrice() const {
 	return price;
 }
 
@@ -72,6 +92,6 @@ void Vehicle::SetVin(const string& vinSet) {
 	this->vin = vinSet;
 }
 
-string Vehicle::GetVin() {
+string Vehicle::GetVin() const {
 	return vin;
 }

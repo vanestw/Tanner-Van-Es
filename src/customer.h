@@ -17,6 +17,7 @@ public:
 	// Constructors and Destructor
 	Customer(); 
 	Customer(const string& n, const string& pn, const string& ea, bool interested, bool bought, const string& vi, const string& vmi);
+	Customer(Customer* other);
 	~Customer();
 
 	// Setters and Getters
@@ -42,5 +43,5 @@ public:
 	string GetInterestedModel() const;
 
 	void SetIsInterested(bool interested);
-	bool GetIsInterested();
+	bool GetIsInterested() const;
 };

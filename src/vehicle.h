@@ -15,27 +15,28 @@ public:
 // Constructors and Destructor
 	Vehicle();
 	Vehicle(const int& yearCon, const string& makeCon, const string& modelCon, const string& colorCon, const int& daysOnLotCon, const double& priceCon, const string& vinCon);
+	Vehicle(Vehicle* other);
 	~Vehicle();
 
 // Setters and Getters
 	void SetYear(const int& yearSet);
-	int GetYear();
+	int GetYear() const;
 
 	void SetMake(const string& makeSet);
-	string GetMake();
+	string GetMake() const;
 
 	void SetModel(const string& modelSet);
-	string GetModel();
+	string GetModel() const;
 
 	void SetColor(const string& colorSet);
-	string GetColor();
+	string GetColor() const;
 
 	void SetDaysOnLot(const int& daysOnLotSet);
-	int GetDaysOnLot();
+	int GetDaysOnLot() const;
 
 	void SetPrice(const double& priceSet);
-	double GetPrice();
+	double GetPrice() const;
 
 	void SetVin(const string& vinSet);
-	string GetVin();
+	string GetVin() const;
 };

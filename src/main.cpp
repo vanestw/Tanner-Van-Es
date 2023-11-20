@@ -27,5 +27,11 @@ int main() {
 	cout << "Finding vehicle by VIN #" << endl;
 	dealership.SearchForVehicle("ABC123456789XYZ");
 
+	cout << "===============================================================================================================" << endl;
+
+	dealership.BuyCar();
+
+	dealership.PrintSalesInfo();
+
 	return 0;
 } // ends main()
