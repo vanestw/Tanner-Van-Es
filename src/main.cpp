@@ -5,6 +5,9 @@ int main() {
 	Dealership dealership;
 	dealership.OpenFile();
 	dealership.PrintCustomerInfo();
+	cout << endl;
+	dealership.PrintVehicleInfo();
+	dealership.CloseFile();
 	// Customer* customer = new Customer("Eli", "555-555-5555", "eli@eli.com", true, false, "Ford", "Fiesta");
 	// Vehicle* vehicle = new Vehicle(2023, "Rolls-Royce", "Phantom", "White", 30, 500000, "RR456789XYZ123");
 

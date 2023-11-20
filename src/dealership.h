@@ -9,10 +9,11 @@ class Dealership {
 	vector<Sales*> vecSales;
 	Customer* customer;
 	Vehicle* vehicle;
-
+// File stream variables
 	ifstream inputFile;
 	ofstream outputFile;
-	string filename = "file.txt";
+	string customersFilename = "txtfiles/customers.txt";
+	string vehiclesFilename = "txtfiles/vehicles.txt";
 public:
 // Constructors and Destrcutor
     Dealership();
@@ -39,12 +40,12 @@ public:
 // Sales Class Stuff
 	void PrintSalesInfo() const;
 
-
-	void BuyCar();
-
 // File Stuff
 	void OpenFile();
-	// void CloseFile();
+	void SaveToFile();
+
+// IDK
+	void BuyCar();
 
 // Methods To Write
     void FindInterestedCustomer() const;
