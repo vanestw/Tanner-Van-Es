@@ -7,7 +7,7 @@ int main() {
 	Vehicle* vehicle = new Vehicle(2023, "Rolls-Royce", "Phantom", "White", 30, 500000, "RR456789XYZ123");
 
 	dealership.AddCustomer(customer);
-	dealership.AddCustomer("Zara", "420-6969-CUTIE", "zara@zara.com", true, false, "Cat Mobile", "Cuteness");
+	dealership.AddCustomer("Zara", "303-3333-CUTIE", "zara@zara.com", true, false, "Cat Mobile", "Cuteness");
 
 	cout << "Customer info: " << endl;
     dealership.PrintCustomerInfo();
