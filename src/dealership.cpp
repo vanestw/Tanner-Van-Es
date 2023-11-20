@@ -6,11 +6,11 @@ Dealership::Dealership() {
 
 Dealership::~Dealership() {
 	cout << "DEALERSHIP DESTRUCTOR CALLED" << endl;
-	for (Customer* each : vecCustomers) {
+	for(Customer* each : vecCustomers) {
             delete each;
 	} // ends for 
 
-	for (Vehicle* each : vecVehicles) {
+	for(Vehicle* each : vecVehicles) {
             delete each;
     } // ends for
 } // ends ~Dealership()
@@ -67,6 +67,8 @@ int Dealership::FindCurrentCustomerIndex(const string& nameToFind) const {
 	 return -1;
 } // ends FindCurrentCustomer()
 
+// Finds the customer you pass to it and prints out their information We obv should implement some kind of sorting & searching algo to make this roar.
+
 void Dealership::FindCurrentCustomer(const string& nameToFind) const {
 	for(size_t i = 0; i < vecCustomers.size(); i++) { 
 		cout << "Searching for " << nameToFind << "..." << endl;
@@ -87,6 +89,7 @@ int Dealership::SearchForVehicleIndex(const string& vehicleToFind) const {
 	  return 1;
 } // ends SearchForVehicle()
 
+// Same as aove we obv should implement some kind of sorting & searching algo to make this roar.
 void Dealership::SearchForVehicle(const string& vehicleToFind) const {
 	for(size_t i = 0; i < vecVehicles.size(); i++) {
 		if(vehicleToFind == vecVehicles.at(i)->GetVin()) {
@@ -97,7 +100,6 @@ void Dealership::SearchForVehicle(const string& vehicleToFind) const {
 } // ends SearchForVehicle()
 
 // VEHICLE STUFF BELOW
-
 // This method is the same as the AddCustomer above
 void Dealership::AddVehicle(const int& yearAdd, const string& makeAdd, const string& modelAdd, const string& colorAdd, const int& daysOnLotAdd, const double& priceAdd, const string& vinAdd) {
 	vecVehicles.emplace_back(new Vehicle(yearAdd, makeAdd, modelAdd, colorAdd, daysOnLotAdd, priceAdd, vinAdd));
