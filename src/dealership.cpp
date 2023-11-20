@@ -29,6 +29,7 @@ void Dealership::AddCustomer(Customer* obj) {
 // Prints customer info..
 void Dealership::PrintCustomerInfo() const {
 	for(size_t i = 0; i < vecCustomers.size(); i++) { 
+		cout << "Customer #" << i + 1 << endl;
 		cout << "Name: " << vecCustomers.at(i)->GetName() << endl;
 		cout << "Phone number: " << vecCustomers.at(i)->GetPhoneNumber() << endl;
 		cout << "Email address: " << vecCustomers.at(i)->GetEmailAddresss() << endl;
@@ -114,6 +115,7 @@ void Dealership::AddVehicle(Vehicle* obj) {
 // The same as PrintCustomerInfo above
 void Dealership::PrintVehicleInfo() const {
 	for(size_t i = 0; i < vecVehicles.size(); i++) { 
+		cout << "Vehicle #" << i + 1 << endl;
 		cout << "Make: " << vecVehicles.at(i)->GetMake() << endl;
 		cout << "Model: " << vecVehicles.at(i)->GetModel() << endl;
 		cout << "Color: " << vecVehicles.at(i)->GetColor() << endl;
@@ -189,9 +191,7 @@ void Dealership::BuyCar() {
 
 // TODO
 void Dealership::OpenFile() {
-    string name, pn, ea, iv, im, line, boughtStr, interestedStr;
-    bool interested = false, bought = false, customerDataComplete = false;
-
+	string line;
     vecCustomers.clear();
     vecVehicles.clear();
     vecSales.clear();
@@ -201,36 +201,37 @@ void Dealership::OpenFile() {
         cerr << filename << " unable to open!" << endl;
         return;
     }
-    while(inputFile >> line) {
-        if(line == "Customers:") {
-			inputFile >> ws; // get rid of leading whitespace
-            while (getline(inputFile, line) && !line.empty() && line != "Vehicles:") {
-                if (line == "Name:") { 
-                    getline(inputFile, name);
-				} else if (line == "Phone:") { 
-                    getline(inputFile, pn);
-				} else if (line == "Email:") { 
-                    getline(inputFile, ea);
-                } else if (line == "Interested:") { 
-                    getline(inputFile, interestedStr);
-                } else if (line == "Bought:") { 
-                    getline(inputFile, boughtStr);
-				} else if (line == "Vehicle:") { 
-                    getline(inputFile, iv);
-				} else if (line == "Model:") { 
-                    getline(inputFile, im);
-				} // ends if
-            istringstream(interestedStr) >> interested;
-            istringstream(boughtStr) >> bought;
 
-			if(!customerDataComplete) { 
-				AddCustomer(name, pn, ea, interested, bought, iv, im);
-				customerDataComplete = true;
-			} // ends if
-            } // ends while
-        } // ends if
-		  customerDataComplete = false;
-    } // ends while
+	while(getline(inputFile, line)) {
+		if(line.find("Customer") != string::npos) {
+			string name, pn, ea, interestedStr, boughtStr, iv, im;
+			bool interested = false, bought = false;
+			while(getline(inputFile, line) && !line.empty()) {
+				if(line == "Name:") {
+					getline(inputFile, name);
+				} else if(line == "Phone:") {
+					getline(inputFile, pn);
+				} else if(line == "Email:") {
+					getline(inputFile, ea);
+				} else if(line == "Interested:") {
+					getline(inputFile, interestedStr);
+				} else if(line == "Bought:") {
+					getline(inputFile, boughtStr);
+				} else if(line == "Vehicle:") {
+					getline(inputFile, iv);
+				} else if(line == "Model:") {
+					getline(inputFile, im);
+				} // ends if
+
+				if(!name.empty() && !pn.empty() && !ea.empty() && !interestedStr.empty() && !boughtStr.empty() && !iv.empty() && !im.empty()) { 
+					istringstream(interestedStr) >> interested;
+					istringstream(boughtStr) >> bought;
+					cout << "Adding customer: " << name << ", " << pn << ", " << ea << ", " << interested << ", " << bought << ", " << iv << ", " << im << endl;
+					AddCustomer(name, pn, ea, interested, bought, iv, im);
+				}
+			} // ends while
+		} // ends if
+	} // ends while
 
     inputFile.close();
 } // ends OpenFile()
