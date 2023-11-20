@@ -58,42 +58,43 @@ void Dealership::FindInterestedCustomer() const {
 }
 
 // More like -- iterates throught vector to find name. We obv should implement some kind of sorting & searching algo to make this roar.
-size_t Dealership::FindCurrentCustomer(const string& nameToFind) const {
-	size_t index = 0;
+int Dealership::FindCurrentCustomerIndex(const string& nameToFind) const {
 	for(size_t i = 0; i < vecCustomers.size(); i++) { 
-        if (nameToFind == vecCustomers.at(i)->GetName()) {
-			index = i;
-			return index;
+        if(nameToFind == vecCustomers.at(i)->GetName()) {
+			return i;
         } // ends if
     } // ends for
-	 return 1;
+	 return -1;
 } // ends FindCurrentCustomer()
 
-// int Dealership::FindCurrentCustomer(const string& nameToFind) const {
-// 	size_t index;
-// 	for(size_t i = 0; i < vecCustomers.size(); i++) { 
-// 		cout << "Searching for " << nameToFind << "..." << endl;
-//         if (nameToFind == vecCustomers.at(i)->GetName()) {
-// 			cout << "FOUND " << nameToFind << endl;
-// 			PrintCustomerInfo(vecCustomers.at(i));
-// 			index = i;
-//         } // ends if
-//     } // ends for
-// 	 return index;
-// } // ends FindCurrentCustomer()
+void Dealership::FindCurrentCustomer(const string& nameToFind) const {
+	for(size_t i = 0; i < vecCustomers.size(); i++) { 
+		cout << "Searching for " << nameToFind << "..." << endl;
+        if(nameToFind == vecCustomers.at(i)->GetName()) {
+			cout << "FOUND " << nameToFind << endl;
+			PrintCustomerInfo(vecCustomers.at(i));
+        } // ends if
+    } // ends for
+} // ends FindCurrentCustomer()
 
 // Same as above... we obj need to implement sorting & searching algo!
-size_t Dealership::SearchForVehicle(const string& vehicleToFind) const {
-	size_t index = 0;
+int Dealership::SearchForVehicleIndex(const string& vehicleToFind) const {
 	for(size_t i = 0; i < vecVehicles.size(); i++) {
 		if(vehicleToFind == vecVehicles.at(i)->GetVin()) {
-			index = i;
-			return index;
+			return i;
 		} // ends if
 	} // ends for
 	  return 1;
 } // ends SearchForVehicle()
 
+void Dealership::SearchForVehicle(const string& vehicleToFind) const {
+	for(size_t i = 0; i < vecVehicles.size(); i++) {
+		if(vehicleToFind == vecVehicles.at(i)->GetVin()) {
+			cout << "FOUND " << vehicleToFind << endl;
+			PrintVehicleInfo(vecVehicles.at(i));
+		} // ends if
+	} // ends for
+} // ends SearchForVehicle()
 
 // VEHICLE STUFF BELOW
 
@@ -167,17 +168,68 @@ void Dealership::BuyCar() {
 	string vname;
 	cout << "You want to buy a car?, what is your name?" << endl;
 	getline(cin, name);
-	Customer* currCustomer = vecCustomers.at(FindCurrentCustomer(name));
-	if(FindCurrentCustomer(name) == 1) {
-		cout << "You are not in the database, sorry!" << endl;
+	Customer* currCustomer = vecCustomers.at(FindCurrentCustomerIndex(name));
+	if(FindCurrentCustomerIndex(name) == -1) {
+		cout << endl << endl << "You are not in the database, sorry!" << endl;
 		cout << "bye, bye." << endl;
 		return;
 	} else { 
 	cout << "What car would you like to buy? (Type VIN number)" << endl;
 	PrintVehicleInfo();
 	getline(cin, vname);
-	Vehicle* currVehicle = vecVehicles.at(SearchForVehicle(vname));
+	Vehicle* currVehicle = vecVehicles.at(SearchForVehicleIndex(vname));
+	currCustomer->SetBoughtCar(true);
 	Sales* currSale = new Sales(currVehicle, currCustomer, "Alex", 10.00, 2.32, 4.55, 500.39);
 	vecSales.emplace_back(currSale);
 	}
 } // ends BuyCar()
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TODO
+// void Dealership::OpenFile() {
+// auto line;
+// 	vecVehicles.clear();
+// 	vecCustomers.clear();
+// 	vecSales.clear();
+//
+// 	while(getline(inputFile, line)) {
+// 		if(line == "Vehicles:") {
+// 			while(getline(inputFile, line) && !line.empty()) {
+// 				AddVehicle(line);
+// 			} // ends while
+// 				vecVehicles.emplace_back(vehicle);
+// 		} // ends if
+// 	} // ends while
+//
+// 	inputFile.close();
+// } // ends OpenFile()
+//
+// void Dealership::CloseFile() {
+// auto line;
+//         outputFile << "Vehicles:" << endl;
+// 		for(Vehicle* vehicle : vecVehicles) { 
+// 			if(vehicle != nullptr) { 
+//             outputFile << vehicle->GetYear() << '\n';
+//             outputFile << vehicle->GetMake() << '\n';
+//             outputFile << vehicle->GetModel() << '\n';
+//             outputFile << vehicle->GetColor() << '\n';
+//             outputFile << vehicle->GetDaysOnLot() << '\n';
+//             outputFile << vehicle->GetPrice() << '\n';
+//             outputFile << vehicle->GetVin() << '\n';
+// 			} else {
+// 				cerr << "Null vehicle ptr." << endl;
+// 			} // ends if
+//         } // ends for
+//         outputFile.close();
+// } // ends CloseFile()

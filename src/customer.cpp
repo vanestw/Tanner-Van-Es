@@ -2,8 +2,7 @@
 
 // Constructors and Destructor
 Customer::Customer() {
-	cout << "CUSTOMER CONSTRUCTOR CALLED" << endl;
-	this->name = "NO NAME";
+	cout << "CUSTOMER DEFAULT CONSTRUCTOR CALLED" << endl;
 } // ends Customer()
 
 Customer::Customer(const string& n, const string& pn, const string& ea, bool interested, bool bought, const string& vi, const string& vmi) {
@@ -16,17 +15,6 @@ Customer::Customer(const string& n, const string& pn, const string& ea, bool int
 	interestedVehicle = vi;
 	interestedModel = vmi;
 } // ends paramaterized Customer()
-
-// Customer::Customer(const string& n, const string& pn, const string& ea, bool interested, bool bought, const string& vi, const string& vmi) {
-// 	cout << "CUSTOMER PARAMATERIZED CONSTRUCTOR CALLED" << endl;
-// 	this->SetName(n);
-// 	this->SetPhoneNumber(pn);
-// 	this->SetEmailAddress(ea);
-// 	this->SetIsInterested(interested);
-// 	this->SetBoughtCar(bought);
-// 	this->SetInterstedVehicle(vi);
-// 	this->SetInterestedModel(vmi);
-// } // ends paramaterized Customer()
 
 Customer::Customer(Customer* other) {
 	name = other->name;

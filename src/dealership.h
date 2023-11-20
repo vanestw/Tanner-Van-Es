@@ -1,5 +1,6 @@
 #include "sales.h"
 #include <vector>
+#include <fstream>
 #pragma once
 
 class Dealership {
@@ -9,6 +10,9 @@ class Dealership {
 	Customer* customer;
 	Vehicle* vehicle;
 
+	ifstream inputFile;
+	ofstream outputFile;
+	string filename = "file.txt";
 public:
 // Constructors and Destrcutor
     Dealership();
@@ -18,7 +22,8 @@ public:
     void AddCustomer(const string& name, const string& phoneNumber, const string& emailAddress, bool interested, bool bought, const string& interestedVehicle, const string& interestedModel);
 	void AddCustomer(Customer* obj);
 
-    size_t FindCurrentCustomer(const string& nameToFind) const;
+	void FindCurrentCustomer(const string& nameToFind) const;
+    int FindCurrentCustomerIndex(const string& nameToFind) const;
 
     void PrintCustomerInfo() const;
     void PrintCustomerInfo(Customer* obj) const;
@@ -28,13 +33,18 @@ public:
 	void AddVehicle(Vehicle* obj);
     void PrintVehicleInfo() const;
 	void PrintVehicleInfo(Vehicle* obj) const;
-    size_t SearchForVehicle(const string& vehicleToFind) const;
+    void SearchForVehicle(const string& vehicleToFind) const;
+    int SearchForVehicleIndex(const string& vehicleToFind) const;
 
 // Sales Class Stuff
 	void PrintSalesInfo() const;
 
 
 	void BuyCar();
+
+// File Stuff
+	// void OpenFile();
+	// void CloseFile();
 
 // Methods To Write
     void FindInterestedCustomer() const;

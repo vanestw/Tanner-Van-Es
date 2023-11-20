@@ -25,16 +25,6 @@ Vehicle::Vehicle(Vehicle* other) {
 	vin = other->vin;
 }
 
-// Vehicle::Vehicle(const int& yearCon, const string& makeCon, const string& modelCon, const string& colorCon, const int& daysOnLotCon, const double& priceCon, const string& vinCon) {
-// 	this->SetYear(yearCon);
-// 	this->SetMake(makeCon);
-// 	this->SetModel(modelCon);
-// 	this->SetColor(colorCon);
-// 	this->SetDaysOnLot(daysOnLotCon);
-// 	this->SetPrice(priceCon);
-// 	this->SetVin(vinCon);
-// } // ends paramaterized Vehicle()
-
 Vehicle::~Vehicle() {
 	cout << "VEHICLE DESTRUCTOR CALLED" << endl;
 } // ends ~Vehicle()

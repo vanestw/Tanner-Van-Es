@@ -7,6 +7,7 @@ Sales::Sales(string sn, double sp, double sbd, double sbw, double sbm) {
 	salesByWeek = sbw;
 	salesByMonth = sbm;
 } // ends paramaterized Sales()
+  
 Sales::Sales(Vehicle* vehicle, Customer* customer, string sn, double sp, double sbd, double sbw, double sbm) {
 	tmpCust = customer;
 	tmpVehic = vehicle;

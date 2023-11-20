@@ -13,8 +13,7 @@ int main() {
     dealership.PrintCustomerInfo();
 	
 	cout << endl;
-	cout << "Finding Eli: " << endl;
-    dealership.FindCurrentCustomer("Eli");
+    dealership.FindCurrentCustomer("Zara");
 
 	cout << endl;
 
