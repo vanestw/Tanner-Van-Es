@@ -10,6 +10,10 @@ Dealership::~Dealership() {
 	for (Customer* each : vecCustomers) {
             delete each;
     }
+
+	for (Vehicle* each : vecVehicles) {
+            delete each;
+    }
 }
 
 void Dealership::AddCustomer(const string& name, const string& phoneNumber, const string& emailAddress, bool interested, bool bought, const string& interestedVehicle, const string& interestedModel) {
@@ -74,6 +78,10 @@ void Dealership::SearchForVehicle(const string& vehicleToFind) const {
 
 void Dealership::AddVehicle(const int& yearAdd, const string& makeAdd, const string& modelAdd, const string& colorAdd, const int& daysOnLotAdd, const double& priceAdd, const string& vinAdd) {
 	vecVehicles.emplace_back(new Vehicle(yearAdd, makeAdd, modelAdd, colorAdd, daysOnLotAdd, priceAdd, vinAdd));
+}
+
+void Dealership::AddVehicle(Vehicle* obj) {
+	vecVehicles.emplace_back(obj);
 }
 
 void Dealership::PrintVehicleInfo() const {
