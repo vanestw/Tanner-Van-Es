@@ -2,13 +2,20 @@
 
 int main() {
 	Dealership dealership;
+	dealership.MainMenu();
 	dealership.OpenFile();
-	// dealership.PrintCustomerInfo();
-	// cout << endl;
-	// dealership.PrintVehicleInfo();
-	// dealership.BuyCar();
-	dealership.PrintSalesInfo();
-	// dealership.SaveToFile();
+	// dealership.PrintSalesInfo();
+	// if(dealership.Login()) { 
+	// 	dealership.OpenFile();
+	// 	// dealership.PrintCustomerInfo();
+	// 	// cout << endl;
+	// 	dealership.PrintVehicleInfo();
+	// 	// dealership.BuyCar();
+	// 	// dealership.PrintPotentialCustomerInfo();
+	// 	// dealership.SaveToFile();
+	// } else {
+	// 	cerr << "Invalid login." << endl;
+	// }
 
 	return 0;
 } // ends main()

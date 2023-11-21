@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/access-control.o: src/access-control.cpp.o
+.PHONY : src/access-control.o
+
+# target to build an object file
+src/access-control.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/access-control.cpp.o
+.PHONY : src/access-control.cpp.o
+
+src/access-control.i: src/access-control.cpp.i
+.PHONY : src/access-control.i
+
+# target to preprocess a source file
+src/access-control.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/access-control.cpp.i
+.PHONY : src/access-control.cpp.i
+
+src/access-control.s: src/access-control.cpp.s
+.PHONY : src/access-control.s
+
+# target to generate assembly for a file
+src/access-control.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/access-control.cpp.s
+.PHONY : src/access-control.cpp.s
+
 src/customer.o: src/customer.cpp.o
 .PHONY : src/customer.o
 
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... src/access-control.o"
+	@echo "... src/access-control.i"
+	@echo "... src/access-control.s"
 	@echo "... src/customer.o"
 	@echo "... src/customer.i"
 	@echo "... src/customer.s"
