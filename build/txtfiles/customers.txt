@@ -16,11 +16,11 @@ Filtered
 
 Customer
 Name:
-Justin Blume
+John Smith
 Phone:
 3038739999
 Email:
-justin@gmail.com
+john@smith.com
 Interested:
 1
 Bought:
