@@ -1,6 +1,6 @@
 #include "sales.h"
 
-Sales::Sales(string sn, double sp, double sbd, double sbw, double sbm) {
+Sales::Sales(const string& sn, const double& sp, const double& sbd, const double& sbw, const double& sbm) {
 	salesmanName = sn;
 	salePrice = sp;
 	salesByDay = sbd,
@@ -8,7 +8,7 @@ Sales::Sales(string sn, double sp, double sbd, double sbw, double sbm) {
 	salesByMonth = sbm;
 } // ends paramaterized Sales()
   
-Sales::Sales(Vehicle* vehicle, Customer* customer, string sn, double sp, double sbd, double sbw, double sbm) {
+Sales::Sales(Vehicle* vehicle, Customer* customer, const string& sn, const double& sp, const double& sbd, const double& sbw, const double& sbm) {
 	tmpCust = customer;
 	tmpVehic = vehicle;
 	salesmanName = sn;
@@ -17,6 +17,10 @@ Sales::Sales(Vehicle* vehicle, Customer* customer, string sn, double sp, double 
 	salesByWeek = sbw;
 	salesByMonth = sbm;
 } // ends paramaterized Sales()
+
+Sales::~Sales() {
+	cout << "SALES DESTRUCTOR CALLED" << endl;
+}
 
 // SETTERS AND GETTERS
 

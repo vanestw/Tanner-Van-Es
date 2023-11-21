@@ -10,13 +10,14 @@ class Sales {
 	double salesByWeek;
 	double salesByMonth;
 	string salesmanName;
-	Customer* tmpCust;
-	Vehicle* tmpVehic;
+	Customer* tmpCust = new Customer();
+	Vehicle* tmpVehic = new Vehicle();
 public:
 // CONSTRUCTORS AND DESTRUCTOR
 	Sales();
-	Sales(string sn, double sp, double sbd, double sbw, double sbm);
-	Sales(Vehicle* vehicle, Customer* customer, string sn, double sp, double sbd, double sbw, double sbm);
+	Sales(const string& sn, const double& sp, const double& sbd, const double& sbw, const double& sbm);
+	Sales(Vehicle* vehicle, Customer* customer, const string& sn, const double& sp, const double& sbd, const double& sbw, const double& sbm);
+	~Sales();
 
 // SETTERS AND GETTERS
 

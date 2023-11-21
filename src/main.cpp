@@ -3,10 +3,12 @@
 int main() {
 	Dealership dealership;
 	dealership.OpenFile();
-	dealership.PrintCustomerInfo();
-	cout << endl;
-	dealership.PrintVehicleInfo();
-	dealership.SaveToFile();
+	// dealership.PrintCustomerInfo();
+	// cout << endl;
+	// dealership.PrintVehicleInfo();
+	// dealership.BuyCar();
+	dealership.PrintSalesInfo();
+	// dealership.SaveToFile();
 
 	return 0;
 } // ends main()

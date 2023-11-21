@@ -40,9 +40,9 @@ zara@cute.com
 Interested:
 1
 Bought:
-0
+1
 Vehicle:
-Car Mobile
+Purr Mobile
 Model:
-Best Model
+Kitty
 
