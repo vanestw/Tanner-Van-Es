@@ -1,11 +1,13 @@
 #include "access-control.h"
 
 AccessControl::AccessControl() {
+	cout << "ACCESSCONTROL DEFAULT CONSTRUCTOR CALLED" << endl;
 	userName = "NULL";
 	userPassword = "NULL";
 }
 
 AccessControl::AccessControl(const string& user, const string& password) {
+	cout << "ACCESSCONTROL PARAMATERIZED CONSTRUCTOR CALLED" << endl;
 	userName = user;
 	userPassword = password;
 }

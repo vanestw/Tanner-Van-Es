@@ -1,22 +1,14 @@
 #include "dealership.h"
 
 int main() {
+	try { 
 	Dealership dealership;
 	dealership.MainMenu();
 	dealership.OpenFile();
-	// dealership.PrintSalesInfo();
-	// if(dealership.Login()) { 
-	// 	dealership.OpenFile();
-	// 	// dealership.PrintCustomerInfo();
-	// 	// cout << endl;
-	// 	dealership.PrintVehicleInfo();
-	// 	// dealership.BuyCar();
-	// 	// dealership.PrintPotentialCustomerInfo();
-	// 	// dealership.SaveToFile();
-	// } else {
-	// 	cerr << "Invalid login." << endl;
-	// }
-
+	} catch(const exception& e) {
+		cout << e.what() << endl;
+		return 0;
+	} // ends try-catch block
 	return 0;
 } // ends main()
 
@@ -40,3 +32,18 @@ int main() {
 	// cout << "===============================================================================================================" << endl;
 	// dealership.BuyCar();
 	// dealership.PrintSalesInfo();
+	
+
+	// dealership.PrintSalesInfo();
+	// if(dealership.Login()) { 
+	// 	dealership.OpenFile();
+	// 	// dealership.PrintCustomerInfo();
+	// 	// cout << endl;
+	// 	dealership.PrintVehicleInfo();
+	// 	// dealership.BuyCar();
+	// 	// dealership.PrintPotentialCustomerInfo();
+	// 	// dealership.SaveToFile();
+	// } else {
+	// 	cerr << "Invalid login." << endl;
+	// }
+

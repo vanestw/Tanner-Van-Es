@@ -37,7 +37,7 @@ public:
 	Customer* FindCustomer(const string& nameToFind) const;
     int FindCustomerIndex(const string& nameToFind) const;
 
-    void PrintCustomerInfo() const;
+    void PrintEntirCustomerVector() const;
     void PrintCustomerInfo(Customer* obj) const;
 	void PrintPotentialCustomerInfo() const;
 
@@ -49,8 +49,10 @@ public:
 	bool FindVehicleType(Vehicle* vehicle, const string& vehicleToFind, const string& option) const;
     Vehicle* FindVehicleObj(const string& vehicleToFind) const;
 
+	void FilterVehiclePrintResults(const string& cRole) const;
+
 // Sales Class Stuff
-	void PrintSalesInfo() const;
+	void PrintEntireSalesVector() const;
 	void AddSale(Vehicle* vehicle, Customer* customer, const string& sn, const double& sp, const double& sbd, const double& sbw, const double& sbm);
 	void AddSale(Sales* obj);
 
