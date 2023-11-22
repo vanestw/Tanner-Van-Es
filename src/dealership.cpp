@@ -264,6 +264,7 @@ void Dealership::PrintVehicleInfo() const {
 		index++;
 	} // ends for
 
+// Checking current role for extra options
 	if(currentRole == "owner") {
 		char answer;
 		cout << "Would you like to filter the results? (y/n)" << endl;
