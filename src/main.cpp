@@ -14,7 +14,7 @@ int main() {
 
 // SOME CODE TO TEST IF YOU SO PLEASE:
 // Customer* customer = new Customer("Eli", "555-555-5555", "eli@eli.com", true, false, "Ford", "Fiesta");
-	// Vehicle* vehicle = new Vehicle(2023, "Rolls-Royce", "Phantom", "White", 30, 500000, "RR456789XYZ123");
+// Vehicle* vehicle = new Vehicle(2023, "Rolls-Royce", "Phantom", "White", 30, 500000, "RR456789XYZ123");
 	// dealership.AddCustomer(customer);
 	// dealership.AddCustomer("Zara", "303-3333-CUTIE", "zara@zara.com", true, false, "Cat Mobile", "Cuteness");
 	// cout << "Customer info: " << endl;
