@@ -105,6 +105,33 @@ int Dealership::MainMenu() {
 							} // ends switch
 						} while(x != 5);
 					} // ends if currentRole == owner
+					if(currentRole == "manager") {
+						do {
+							cout << "Welcome, please choose which option you would like to do." << endl;
+							cout << "1) View a list of vehicles." << endl;
+							cout << "2) Quit to main menu." << endl;
+							cout << "~> ";
+							cin >> x;
+
+							while(cin.fail() || x < 1 || x > 5) {
+								cerr << "Invalid input. Please enter a number between 1 and 4." << endl;
+								cin.clear();
+								cin.ignore(numeric_limits<streamsize>::max(), '\n');
+								cout << "~> ";
+								cin >> x;
+							} // ends while
+
+							switch(x) {
+								case 1:
+									PrintVehicleInfo();
+									break;
+								case 2:
+									break;
+								default:
+									cerr << "Invalid input. Please enter a number bewteen 1 and 2" << endl;
+							} // ends swtich
+						} while(x != 2);
+					} // ends if currentRole == manager
 				} // ends if this->Login()
 				break; // ends case 1
 			case 2:
@@ -614,6 +641,36 @@ void Dealership::FilterVehiclePrintResults(const string& cRole) const {
 			} // ends outer switch
 		} while(choice != 4); // ends outer do while
 	} // ends if currentRole == "owner" if
+	if(cRole == "manager") {
+		choice = 0;
+		do { 
+			cout << "How would you like to filter the results?" << endl;
+			cout << "1) How long each vehicle has been on the lot." << endl;
+			cout << "2) Quit to previous menu." << endl;
+			cin >> choice;
+			while(cin.fail() || choice < 1 || choice > 2) {
+				cerr << "Invalid input. Please enter a number between 1 and 2." << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cin >> choice;
+			} // ends while
+			switch(choice) {
+				case 1:
+					index = 0;
+					for(const Vehicle* vehicle : vecVehicles) { 
+						cout << "Vehicle VIN number: " << vehicle->GetVin() << endl;
+						cout << "Is taking " << vehicle->GetDaysOnLot() << " days to sell." << endl;
+						if(index != vecVehicles.size() - 1) {
+							cout << endl;
+						} // ends if
+						index++;
+					} // ends for
+					break; // ends case 1 outer
+				case 2:
+					break; // ends case 2 outer
+			}
+		} while(choice != 2);
+	}  // ends if currentRole == "manager" if
 } // ends FilterVehiclePrintResults()
 
 // Prints a vehicle objects information
