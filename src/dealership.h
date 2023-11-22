@@ -55,6 +55,7 @@ public:
 	void PrintEntireSalesVector() const;
 	void AddSale(Vehicle* vehicle, Customer* customer, const string& sn, const double& sp, const double& sbd, const double& sbw, const double& sbm);
 	void AddSale(Sales* obj);
+	double GetGrossSales();
 
 // File Stuff
 

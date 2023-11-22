@@ -658,8 +658,7 @@ void Dealership::FilterVehiclePrintResults(const string& cRole) const {
 				case 1:
 					index = 0;
 					for(const Vehicle* vehicle : vecVehicles) { 
-						cout << "Vehicle VIN number: " << vehicle->GetVin() << endl;
-						cout << "Is taking " << vehicle->GetDaysOnLot() << " days to sell." << endl;
+						cout << "Vehicle VIN number: " << vehicle->GetVin() << " has been on the lot for " << vehicle->GetDaysOnLot() << " days." << endl;
 						if(index != vecVehicles.size() - 1) {
 							cout << endl;
 						} // ends if
