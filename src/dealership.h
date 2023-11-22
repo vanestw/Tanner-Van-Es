@@ -23,7 +23,6 @@ public:
     Dealership();
     ~Dealership();
 
-
 // TODO CHANGE EVRERY FIND METHOD TO USE A SEARCHING ALGO
 // TODO MAY NOT NEED THE OVERLOADED METHODS
 
@@ -45,10 +44,10 @@ public:
 // Vehicle Class Stuff
     void AddVehicle(const int& yearAdd, const string& makeAdd, const string& modelAdd, const string& colorAdd, const int& daysOnLotAdd, const double& priceAdd, const string& vinAdd);
 	void AddVehicle(Vehicle* obj);
-    void PrintVehicleInfo() const;
 	void PrintVehicleInfo(Vehicle* obj) const;
     int FindVehicleIndex(const string& vehicleToFind) const;
-    Vehicle* FindVehicle(const string& vehicleToFind) const;
+	bool FindVehicleType(Vehicle* vehicle, const string& vehicleToFind, const string& option) const;
+    Vehicle* FindVehicleObj(const string& vehicleToFind) const;
 
 // Sales Class Stuff
 	void PrintSalesInfo() const;
@@ -60,7 +59,8 @@ public:
 // TMP METHODS
 	int BuyCar();
 
-// Methods To Write / FIXME
-	void OpenFile();
-	void SaveToFile();
+// Methods To Write OR FIXME
+	void OpenFile(); // TODO
+	void SaveToFile(); // TODO
+    void PrintVehicleInfo() const; // TODO
 };

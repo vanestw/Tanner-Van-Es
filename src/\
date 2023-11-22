@@ -243,6 +243,57 @@ Vehicle* Dealership::FindVehicleObj(const string& vehicleToFind) const {
 	return nullptr;
 } // ends SearchForVehicle()
 
+// FIXME Only seems to be searching the first element...
+bool Dealership::FindVehicleType(Vehicle* vehicle, const string& vehicleToFind, const string& option) const {
+	if(option == "MAKE") { 
+			if(vehicleToFind == vehicle->GetMake()) {
+				return true;
+			} else {
+				return false;
+			} // ends if
+	} else if(option == "MODEL") {
+			if(vehicleToFind == vehicle->GetModel()) {
+				return true;
+			} else {
+				return false;
+			} // ends if
+	} else if(option == "YEAR") {
+		int tmp = stoi(vehicleToFind);
+			if(tmp == vehicle->GetYear()) {
+				return true;
+			} else {
+				return false;
+			} // ends if
+	} else if(option == "COLOR") {
+			if(vehicleToFind == vehicle->GetColor()) {
+				return true;
+			} else {
+				return false;
+			} // ends if
+	} else if(option == "DOL") {
+		int tmp = stoi(vehicleToFind);
+			if(tmp == vehicle->GetDaysOnLot()) {
+				return true;
+			} else {
+				return false;
+			} // ends if
+	} else if(option == "PRICE") {
+		int tmp = stoi(vehicleToFind);
+			if(tmp >= vehicle->GetPrice() && tmp <= vehicle->GetPrice() + 1) {
+				return true;
+			} else {
+				return false;
+			} // ends if
+	} else if(option == "VIN") {
+			if(vehicleToFind == vehicle->GetVin()) {
+				return true;
+			} else {
+				return false;
+			} // ends if
+		}
+	return false;
+} // ends FindVehicle()
+
 // Prints vehicle info, has some extra options if currentRole is owner (TODO add separate options for manager and salesman)
 void Dealership::PrintVehicleInfo() const {
 	string tmpMake, tmpModel, tmpColor;
@@ -264,12 +315,12 @@ void Dealership::PrintVehicleInfo() const {
 		index++;
 	} // ends for
 
-	// Checking current role for extra options
+// Checking current role for extra options
 	if(currentRole == "owner") {
 		char answer;
-		cout << "Would you like to filter the results?(y/n)" << endl;
+		cout << "Would you like to filter the results? (y/n)" << endl;
 		cin >> answer;
-		while(cin.fail() ||(answer != 'y' && answer != 'n')) {
+		while(cin.fail() || (answer != 'y' && answer != 'n')) {
 			cerr << "Invalid input. Please enter y or n" << endl;
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -328,7 +379,6 @@ void Dealership::PrintVehicleInfo() const {
 								cin >> x;
 							} // ends while
 							char y;
-							bool found = false;
 							switch(x) {
 								case 1:
 									cout << "Which make do you want to search for?" << endl;
@@ -341,40 +391,33 @@ void Dealership::PrintVehicleInfo() const {
 									} // ends while
 									counter = 0;
 									for(const Vehicle* vehicle : vecVehicles) { 
+										while(vehicle->GetMake() != tmpMake) {
+											Vehicle* tmp = vehicle;
+											cerr << "There is no vehicle of make: " << tmpMake << " on the lot." << endl;
+											cerr << "Please enter another vehicle make:" << endl;
+											cin.clear();
+											cin.ignore(numeric_limits<streamsize>::max(), '\n');
+											cin >> tmpMake;
+										}
 										if(vehicle->GetMake() == tmpMake) {
-											found = true;
 											counter++;
 										} // ends if
 									} // ends for
-									  // if the option was not found
-									while(!found) {
-										cerr << "There is no vehicle of make: " << tmpMake << " on the lot." << endl;
-										cerr << "Please enter another vehicle make:" << endl;
-										cin.clear();
-										cin.ignore(numeric_limits<streamsize>::max(), '\n');
-										cin >> tmpMake;
-										for(Vehicle* vehicle : vecVehicles) {
-											if(vehicle->GetMake() == tmpMake) {
-												found = true;
-												counter++;
-											} // ends if
-										} // ends for
-									} // ends not found while
-									if(counter != 1) { 
-										cout << "There are " << counter << " cars with " << tmpMake << " make." << endl;
-										cout << "Would you like to view them?(y/n)" << endl;
-									} else { 
-										cout << "There is " << counter << " car with " << tmpMake << " make." << endl;
-										cout << "Would you like to view it?(y/n)" << endl;
-									}
-									cin >> y;
-									while(cin.fail() ||(y != 'y' && y != 'n')) {
-										cin.clear();
-										cin.ignore(numeric_limits<streamsize>::max(), '\n');
+										if(counter != 1) { 
+											cout << "There are " << counter << " cars with " << tmpMake << " make." << endl;
+											cout << "Would you like to view them? (y/n)" << endl;
+										} else { 
+											cout << "There is " << counter << " car with " << tmpMake << " make." << endl;
+											cout << "Would you like to view it? (y/n)" << endl;
+										}
 										cin >> y;
-									} // ends while
-									if(y == 'n') {
-										continue;
+										while(cin.fail() || (y != 'y' && y != 'n')) {
+											cin.clear();
+											cin.ignore(numeric_limits<streamsize>::max(), '\n');
+											cin >> y;
+										} // ends while
+										if(y == 'n') {
+											continue;
 									} else { 
 										for(Vehicle* vehicle: vecVehicles) {
 											if(vehicle->GetMake() == tmpMake) {
@@ -384,9 +427,6 @@ void Dealership::PrintVehicleInfo() const {
 									} // ends if
 									break; // ends case 1 inner
 								case 2:
-									found = false;
-									counter = 0;
-
 									cout << "Which model do you want to search for?" << endl;
 									cin >> tmpModel;
 									while(cin.fail()) {
@@ -395,34 +435,30 @@ void Dealership::PrintVehicleInfo() const {
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> tmpModel;
 									} // ends while
-									for(const Vehicle* vehicle : vecVehicles) { 
-										if(vehicle->GetModel() == tmpModel) {
-											found = true;
-											counter++;
-										} // ends if
-									} // ends for
-									while(!found) {
+									for(Vehicle* vehicle : vecVehicles) { 
+									while(!FindVehicleType(vehicle, tmpModel, "MODEL")) {
 										cerr << "There is no vehicle of model: " << tmpModel << " on the lot." << endl;
 										cerr << "Please enter another vehicle model:" << endl;
 										cin.clear();
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
-										cin >> tmpMake;
-										for(Vehicle* vehicle : vecVehicles) {
-											if(vehicle->GetModel() == tmpModel) {
-												found = true;
-												counter++;
-											} // ends if
-										} // ends for
-									} // ends not found while
+										cin >> tmpModel;
+									} // ends while
+									}
+									counter = 0;
+									for(const Vehicle* vehicle : vecVehicles) { 
+										if(vehicle->GetModel() == tmpModel) {
+											counter++;
+										} // ends if
+									} // ends for
 									if(counter != 1) { 
 										cout << "There are " << counter << " cars with " << tmpModel << " model." << endl;
-										cout << "Would you like to view them?(y/n)" << endl;
+										cout << "Would you like to view them? (y/n)" << endl;
 									} else {
 										cout << "There is " << counter << " car with " << tmpModel << " model." << endl;
-										cout << "Would you like to view it?(y/n)" << endl;
+										cout << "Would you like to view it? (y/n)" << endl;
 									}
 									cin >> y;
-									while(cin.fail() ||(y != 'y' && y != 'n')) {
+									while(cin.fail() || (y != 'y' && y != 'n')) {
 										cin.clear();
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> y;
@@ -437,9 +473,7 @@ void Dealership::PrintVehicleInfo() const {
 										} // ends for
 									} // ends if
 									break; // ends case 2 inner
-								case 3: 
-									found = false;	
-									counter = 0;
+								case 3: { 
 									cout << "Which year do you want to search for?" << endl;
 									cin >> tmpYear;
 									while(cin.fail()) {
@@ -448,34 +482,31 @@ void Dealership::PrintVehicleInfo() const {
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> tmpYear;
 									} // ends while
-									for(const Vehicle* vehicle : vecVehicles) { 
-										if(vehicle->GetYear() == tmpYear) {
-											found = true;
-											counter++;
-										} // ends if
-									} // ends for
-									while(!found) {
-										cerr << "There are no vehicles made in " << tmpYear << " on the lot." << endl;
+									string tmp = to_string(tmpYear); 
+									for(Vehicle* vehicle : vecVehicles) { 
+									while(!FindVehicleType(vehicle, tmp, "YEAR")) {
+										cerr << "There are no vehicles made in the year: " << tmpYear << " on the lot." << endl;
 										cerr << "Please enter another vehicle year:" << endl;
 										cin.clear();
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> tmpYear;
-										for(Vehicle* vehicle : vecVehicles) {
-											if(vehicle->GetYear() == tmpYear) {
-												found = true;
-												counter++;
-											} // ends if
-										} // ends for
-									} // ends not found while
-									if(counter != 1) {
-										cout << "There are " << counter << " cars from the year " << tmpYear << " on the lot." << endl;
-										cout << "Would you like to veiw them?(y/n)" << endl;
-									} else {
+									} // ends while
+									}
+									counter = 0;
+									for(const Vehicle* vehicle : vecVehicles) { 
+										if(vehicle->GetYear() == tmpYear) {
+											counter++;
+										} // ends if
+									} // ends for
+									if(counter == 1) {
 										cout << "There is " << counter << " car from the year " << tmpYear << " on the lot." << endl;
-										cout << "Would you like to view it?(y/n)" << endl;
+										cout << "Would you like to view it?" << endl;
+									} else {
+										cout << "There are " << counter << " cars from the year " << tmpYear << " on the lot." << endl;
+										cout << "Would you like to veiw it?" << endl;
 									} // ends if
 									cin >> y;
-									while(cin.fail() ||(y != 'y' && y != 'n')) {
+									while(cin.fail() || (y != 'y' && y != 'n')) {
 										cin.clear();
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> y;
@@ -490,10 +521,8 @@ void Dealership::PrintVehicleInfo() const {
 										} // ends for
 									} // ends if
 
-									break; // ends case 3 inner 
+									} break; // ends case 3 inner -- need the curly braces to initialize variable
 								case 4:
-									found = false;
-									counter = 0;
 									cout << "Which color do you want to search for?" << endl;
 									cin >> tmpColor;
 									while(cin.fail()) {
@@ -502,34 +531,30 @@ void Dealership::PrintVehicleInfo() const {
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> tmpColor;
 									} // ends while
-									for(const Vehicle* vehicle : vecVehicles) { 
-										if(vehicle->GetColor() == tmpColor) {
-											found = true;
-											counter++;
-										} // ends if
-									} // ends for
-									while(!found) {
-										cerr << "There are no vehicles colored " << tmpColor << " on the lot." << endl;
+									for(Vehicle* vehicle : vecVehicles) { 
+									while(!FindVehicleType(vehicle, tmpColor, "COLOR")) {
+										cerr << "There are no vehicles colored: " << tmpColor << " on the lot." << endl;
 										cerr << "Please enter another vehicle color:" << endl;
 										cin.clear();
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> tmpColor;
-										for(Vehicle* vehicle : vecVehicles) {
-											if(vehicle->GetColor() == tmpColor) {
-												found = true;
-												counter++;
-											} // ends if
-										} // ends for
-									} // ends not found while
+									} // ends while
+									}
+									counter = 0;
+									for(const Vehicle* vehicle : vecVehicles) { 
+										if(vehicle->GetColor() == tmpColor) {
+											counter++;
+										} // ends if
+									} // ends for
 									if(counter != 1) { 
 										cout << "There are " << counter << " cars with " << tmpColor << " color." << endl;
-										cout << "Would you like to view them?(y/n)" << endl;
+										cout << "Would you like to view them?" << endl;
 									} else {
 										cout << "There is " << counter << " car with " << tmpColor << " color." << endl;
-										cout << "Would you like to view it?(y/n)" << endl;
+										cout << "Would you like to view it?" << endl;
 									} // ends if
 									cin >> y;
-									while(cin.fail() ||(y != 'y' && y != 'n')) {
+									while(cin.fail() || (y != 'y' && y != 'n')) {
 										cin.clear();
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> y;
@@ -544,9 +569,7 @@ void Dealership::PrintVehicleInfo() const {
 										} // ends for
 									} // ends if
 									break; // ends case 4 inner
-								case 5: 
-									found = false;
-									counter = 0;
+								case 5: { 
 									int timeOnLot;
 									cout << "Enter the maximum time on lot(in days): " << endl;
 									cin >> timeOnLot;
@@ -556,33 +579,30 @@ void Dealership::PrintVehicleInfo() const {
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> timeOnLot;
 									} // ends while
+										string tmp = to_string(tmpYear); 
+									for(Vehicle* vehicle : vecVehicles) { 
+										while(!FindVehicleType(vehicle, tmp, "DOL")) {
+										cerr << "There are no vehicles that have been on the lot for " << timeOnLot << " days or less." << endl;
+										cerr << "Please enter another vehicle color:" << endl;
+										cin.clear();
+										cin.ignore(numeric_limits<streamsize>::max(), '\n');
+										cin >> tmpColor;
+									} // ends while
+									}
+									counter = 0;
 									for(const Vehicle* vehicle : vecVehicles) { 
 										if(vehicle->GetDaysOnLot() <= timeOnLot) {
-											found = true;
 											counter++;
 										} // ends if
 									} // ends for
-									while(!found) {
-										cerr << "No vehicles have been on the lot " << timeOnLot << " days or shorter." << endl;
-										cerr << "Please enter another length of time:" << endl;
-										cin.clear();
-										cin.ignore(numeric_limits<streamsize>::max(), '\n');
-										cin >> timeOnLot;
-										for(Vehicle* vehicle : vecVehicles) {
-											if(vehicle->GetDaysOnLot() == timeOnLot) {
-												found = true;
-												counter++;
-											} // ends if
-										} // ends for
-									} // ends not found while
 									if(counter != 1) {
 										cout << "There are " << counter << " cars with time on lot less than or equal to " << timeOnLot << " days." << endl;
-										cout << "Would you like to view them?(y/n)" << endl;
+										cout << "Would you like to view them?" << endl;
 									} else {
 										cout << "There is " << counter << " car with time on lot less than or equal to " << timeOnLot << " days." << endl;
-										cout << "Would you like to view it?(y/n)" << endl;
+										cout << "Would you like to view it?" << endl;
 									} // ends if
-									while(cin.fail() ||(y != 'y' && y != 'n')) {
+									while(cin.fail() || (y != 'y' && y != 'n')) {
 										cin.clear();
 										cin.ignore(numeric_limits<streamsize>::max(), '\n');
 										cin >> y;
@@ -596,14 +616,14 @@ void Dealership::PrintVehicleInfo() const {
 											} // ends if
 										} // ends for
 									} // ends if
-									break; // ends case 5 inner
+								} break; // ends case 5 inner
 								case 6:
 									break; // ends case 6 inner
 							} // ends inner switch
 						} while(x != 6);
 						break; // ends case 3 outer
 					case 4:
-						break; // ends case 4 outer
+						break;
 				} // ends outer switch
 			} while(choice != 4);
 		} // ends if currentRole == "owner" if
