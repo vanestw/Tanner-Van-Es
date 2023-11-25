@@ -6,7 +6,7 @@
 
 ### Topics Covered
 
-[**Getting Started**](#Getting-Started)
+[**Getting Started**](#getting-started)
 
 [**Creating and Cloning Fork**](#creating-fork)
 
