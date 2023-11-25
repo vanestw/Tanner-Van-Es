@@ -13,9 +13,9 @@ class Dealership {
 	ifstream inputFile;
 	ofstream outputFile;
 	string line;
-	string customersFilename = "../build/txtfiles/customers.txt";
-	string vehiclesFilename = "../build/txtfiles/vehicles.txt";
-	string salesFilename = "../build/txtfiles/sales.txt";
+	string customersFilename = "txtfiles/customers.txt";
+	string vehiclesFilename = "txtfiles/vehicles.txt";
+	string salesFilename = "txtfiles/sales.txt";
 // Objects needed
 	AccessControl accessControl;
 public:
