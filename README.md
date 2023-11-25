@@ -192,7 +192,7 @@ After Homebrew is installed, you need to install the Git package. To do so, just
 brew install git
 ```
 
-[***Click here to return to instructions***](https://github.com/nschmidtfrcc/CSC1061FA23#getting-started)
+[***Click here to return to instructions***](#getting-started)
 
 ## Flow Charts to Help Visualize
 
