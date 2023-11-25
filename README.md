@@ -6,7 +6,7 @@
 
 ### Topics Covered
 
-[**Getting Started**](#getting-started)
+[**Getting Started**](#Getting-Started)
 
 [**Creating and Cloning Fork**](#creating-fork)
 
@@ -28,7 +28,7 @@
 
 **In order to access PowerShell, press the windows button on your keyboard and type in `Windows PowerShell`, press enter and you will be faced with a blue screen and command line.**
 
-## Getting Started(#getting-started)
+## Getting Started
 
 Before we can create a new directory and clone the repository onto your machine, you must do two things.
 
