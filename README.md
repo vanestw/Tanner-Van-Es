@@ -6,19 +6,19 @@
 
 ### Topics Covered
 
-[**Getting Started**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#getting-started)
+[**Getting Started**](#getting-started)
 
-[**Creating and Cloning Fork**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#creating-a-fork-of-the-main-repository)
+[**Creating and Cloning Fork**](#creating-fork)
 
-[**Understanding and Working with Git**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#understanding-and-working-with-git)
+[**Understanding and Working with Git**](#understanding-git)
 
-[**Syncing Your Fork with the Main Repository**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#syncing-your-fork-with-the-main-repository)
+[**Syncing Your Fork with the Main Repository**](#syncing-fork)
 
-[**Submitting Your Code**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#submitting-your-code)
+[**Submitting Your Code**](#submitting-code)
 
-[**Flowcharts to Help Visualization**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume#flow-charts-to-help-visualize)
+[**Flowcharts to Help Visualization**](#flowcharts)
 
-[**Extraneous Resources**](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#extraneous-git-resources)
+[**Extraneous Resources**](#extraneous)
 
 ## Instructions
 
@@ -28,7 +28,7 @@
 
 **In order to access PowerShell, press the windows button on your keyboard and type in `Windows PowerShell`, press enter and you will be faced with a blue screen and command line.**
 
-## Getting Started
+## Getting Started(#getting-started)
 
 Before we can create a new directory and clone the repository onto your machine, you must do two things.
 
@@ -41,7 +41,7 @@ git config --global user.email "your school email address"
 git config --global user.name "your group members names"
 ```
 
-## Creating a Fork of the Main Repository
+## Creating a Fork of the Main Repository(#creating-fork)
 
 Next, go into your GitHub account and go to the following URL:
 
@@ -69,7 +69,7 @@ Please change the `Repository name` to that of you and your group member, for ex
 
 Perfect! Now, you have successfully created a Fork of the main repository. This newly created `Fork` is where you and your partner will be working.
 
-## Cloning Your Fork
+## Cloning Your Fork(#cloning-fork)
 
 Before we can do anything, we must clone a copy of our new Forked repository onto our machines. First, we can create a directory to clone the repo. Type the following into PowerShell or terminal:
 
@@ -100,7 +100,7 @@ If you then type `ls` into PowerShell, you should see the name of your Forked re
 
 Now you have a local copy of the codebase on your machine, and it can be opened via your favorite IDE; navigate to the ClassProject directory like you would any directory and start the project. You can now begin freely working on your code.
 
-## Understanding and Working with Git
+## Understanding and Working with Git(#understanding-git)
 
 The beauty of Git is its ability to share and help *version* our code.
 
@@ -138,7 +138,7 @@ Finally, we can push our changes into the remote repository. To do so, run:
 git push origin <forked repo name>
 ```
 
-## Syncing Your Fork with the Main Repository
+## Syncing Your Fork with the Main Repository(#syncing-fork)
 
 At the start of each class you may want to sync your Forked repository with the main repository. This may be helpful if you see changes made in the main repository that you want mirrored within your Fork. 
 
@@ -158,7 +158,7 @@ You must run `git pull` in order to sync any changes made from the remote reposi
 
 **If you are using an IDE, there should be an option to run `git pull`**
 
-## Submitting Your Code
+## Submitting Your Code(#submitting-code)
 
 If your group feels good about the code you have written and want to "submit" it, create a pull request. In order to do that look for the `Contribute` button directly to the left of the `Sync fork` button (as seen above). This will open a new screen:
 
@@ -168,7 +168,7 @@ A pull request is a way for you to request that your code be *pulled* into the m
 
 Once you write a sufficient title and add a description explaining your code press the `Create pull request` button. You have successfully created a pull request thread, in which the pull request lives. From this point your code will be reviewed and any discussion, changes, or announcements regarding that pull request will happen within the thread.
 
-## Using Personal Device
+## Using Personal Device(#personal-device)
 
 ***If you are using your personal device you will need to install Git onto your computer. The following instructions go though those steps.***
 
@@ -194,7 +194,7 @@ brew install git
 
 [***Click here to return to instructions***](https://github.com/vanestw/Tanner_Van-Es--Eli_Blume/tree/main#getting-started)
 
-## Flow Charts to Help Visualize
+## Flow Charts to Help Visualize(#flowcharts)
 
 This is a very simple flowchart, but can help show what the `git add` and `git commit` commands are doing with your code:
 
@@ -206,7 +206,7 @@ This is a bit more complex, but shows more commands and what they are doing.
 
 ![Git flowchart complex](./.assets/git-flowchart-complex.png)
 
-## Extraneous Git Resources
+## Extraneous Git Resources(#extraneous)
 
 [Git Documentation](https://git-scm.com/doc)
 
