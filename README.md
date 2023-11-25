@@ -6,19 +6,19 @@
 
 ### Topics Covered
 
-[**Getting Started**](https://github.com/nschmidtfrcc/CSC1061FA23#getting-started)
+[**Getting Started**](#getting-started)
 
-[**Creating and Cloning Fork**](https://github.com/nschmidtfrcc/CSC1061FA23#creating-a-fork-of-the-main-repository)
+[**Creating and Cloning Fork**](#creating-a-fork-of-the-main-repository)
 
-[**Understanding and Working with Git**](https://github.com/nschmidtfrcc/CSC1061FA23#understanding-and-working-with-git)
+[**Understanding and Working with Git**](#understanding-and-working-with-git)
 
-[**Syncing Your Fork with the Main Repository**](https://github.com/nschmidtfrcc/CSC1061FA23#syncing-your-fork-with-the-main-repository)
+[**Syncing Your Fork with the Main Repository**](#syncing-your-fork-with-the-main-repository)
 
-[**Submitting Your Code**](https://github.com/nschmidtfrcc/CSC1061FA23#submitting-your-code)
+[**Submitting Your Code**](#submitting-your-code)
 
-[**Flowcharts to Help Visualization**](https://github.com/nschmidtfrcc/CSC1061FA23#flow-charts-to-help-visualize)
+[**Flowcharts to Help Visualization**](#flow-charts-to-help-visualize)
 
-[**Extraneous Resources**](https://github.com/nschmidtfrcc/CSC1061FA23#extraneous-git-resources)
+[**Extraneous Resources**](#extraneous-git-resources)
 
 ## Instructions
 
