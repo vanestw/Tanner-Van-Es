@@ -1,0 +1,47 @@
+Sale
+Salesman's Name:
+John Doe
+Sale Price:
+15000.75
+Sales By Day:
+2.5
+Sales By Week:
+5.3
+Sales By Month:
+100.25
+Customer
+Zara Flara
+Vehicle
+GHI456789012
+
+Sale
+Salesman's Name:
+Jane Smith
+Sale Price:
+20000.50
+Sales By Day:
+3.2
+Sales By Week:
+6.8
+Sales By Month:
+150.75
+Customer
+John Smith
+Vehicle
+DEF987654321
+
+Sale
+Salesman's Name:
+Alex Johnson
+Sale Price:
+18000.25
+Sales By Day:
+2.8
+Sales By Week:
+7.1
+Sales By Month:
+120.50
+Customer
+Water Man
+Vehicle
+ABC123456789

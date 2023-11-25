@@ -1,0 +1,48 @@
+Customer
+Name:
+Water Man
+Phone:
+555WaterMan
+Email:
+water@h20.com
+Interested:
+0
+Bought:
+0
+Vehicle:
+Water Mobile
+Model:
+Filtered
+
+Customer
+Name:
+John Smith
+Phone:
+3038739999
+Email:
+john@smith.com
+Interested:
+1
+Bought:
+1
+Vehicle:
+BMW
+Model:
+M440
+
+Customer
+Name:
+Zara Flara
+Phone:
+3333333333
+Email:
+zara@cute.com
+Interested:
+1
+Bought:
+1
+Vehicle:
+Purr Mobile
+Model:
+Kitty
+
