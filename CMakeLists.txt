@@ -9,6 +9,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wfloat-equal -Wundef -Wca
 
 # Path settings
 set(SRC_PATH src)
+set(OBJ_PATH obj)
 
 # Add main target
 file(GLOB MAIN_SOURCES "${SRC_PATH}/*.cpp")
