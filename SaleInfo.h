@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Sale{
+class SaleInfo{
 
   private:
   int salesByDay;
