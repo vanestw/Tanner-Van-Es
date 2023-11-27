@@ -22,7 +22,7 @@
 
 ## Instructions
 
-[***Click here if you are using your own device***](https://github.com/nschmidtfrcc/CSC1061FA23#using-personal-device)
+[***Click here if you are using your own device***](#using-personal-device)
 
 *In this README we will be referring to PowerShell, but if you are using a Mac the instructions are the same in the terminal.*
 
