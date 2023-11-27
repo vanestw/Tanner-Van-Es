@@ -1,17 +1,19 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #pragma once
 using namespace std;
 
+// TODO: implement actual searching algorithms
 class Customer {
 	string name;
-	string salesmanName;
 	string emailAddress;
 	string phoneNumber;
 	bool boughtCar;
 	bool isInterested;
 	string interestedVehicle;
 	string interestedModel;
+	vector<Customer*> vecCustomers;
 public:
 	// Constructors and Destructor
 	Customer(); 
@@ -19,15 +21,22 @@ public:
 	Customer(Customer* other);
 	~Customer();
 
+	// Methods
+	void AddCustomer(Customer* obj);
+	void AddCustomer(const string& name, const string& phoneNumber, const string& emailAddress, bool interested, bool bought, const string& interestedVehicle, const string& interestedModel);
+	void PrintCustomerInfo(Customer* obj) const;
+	void PrintEntirCustomerVector();
+	void PrintPotentialCustomerInfo() const;
+	void PrintCustomersWhoBoughtCar() const;
+	int FindCustomerIndex(const string& nameToFind) const;
+	Customer* FindCustomer(const string& nameToFind) const;
+
 	// Setters and Getters
 	void SetName(const string& n);
 	string GetName() const;
 
-	void SetSalesmanName(const string& sn);
-	string GetSalesmanName() const;
-
 	void SetEmailAddress(const string& ea);
-	string GetEmailAddresss() const;
+	string GetEmailAddress() const;
 
 	void SetPhoneNumber(const string& pn);
 	string GetPhoneNumber() const;
@@ -43,4 +52,4 @@ public:
 
 	void SetIsInterested(bool interested);
 	bool GetIsInterested() const;
-};
+}; // ends Customer
