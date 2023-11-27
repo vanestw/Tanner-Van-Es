@@ -30,6 +30,20 @@ Customer::~Customer() {
 	// cout << "CUSTOMER DESTRUCTOR CALLED" << endl;
 } // ends ~Customer()
 
+// TODO .h file
+void findInterestedCustomers(){
+
+   cout << "Interested Customers:" << endl;
+   for(int index = 0; index < vecCustomers.size(); index++){
+      cout << "Name: " << name.at(index) << endl;
+      cout << "Email: " << emailAddress.at(index) << endl;
+      cout << "Phone Number: " << phoneNumber.at(index) << endl;
+      cout << "Interested Vehicle: " << interestedVehicle.at(index) << endl;
+      cout << "Interested Model: " << interestedModel.at(index) << endl << endl;
+   }//end for
+
+}//end findInterestedCustomers()
+
 // INPUT: Customer object pointer
 // PROCESS: pushes the pointer to the Customer object into the vector of Customer object pointers
 // OUTPUT: N/A
