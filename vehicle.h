@@ -22,10 +22,7 @@ class Vehicle{
     void setPrice(int userPrice);
     void setVin(int userVin);
     void PrintVehicle();
-    void SearchByMake(string make);
-    void SearchByColor(string color);
-    void SearchByYear(int year);
-    void SearchByDaysOnLot(int days);
+    void SearchBy(string searchType, string searchParameter);
     
     
   
