@@ -24,7 +24,7 @@ Customer::Customer(Customer* other) {
 	boughtCar = other->boughtCar;
 	interestedVehicle = other->interestedVehicle;
 	interestedModel = other->interestedModel;
-}
+} // ends copy constructor
 
 Customer::~Customer() {
 	cout << "CUSTOMER DESTRUCTOR CALLED" << endl;
