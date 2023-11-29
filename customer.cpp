@@ -31,18 +31,19 @@ Customer::~Customer() {
 } // ends ~Customer()
 
 // TODO .h file
-void findInterestedCustomers(){
+void Customer::PrintPotentialCustomerInfo(){
 
-   cout << "Interested Customers:" << endl;
    for(int index = 0; index < vecCustomers.size(); index++){
-      cout << "Name: " << name.at(index) << endl;
-      cout << "Email: " << emailAddress.at(index) << endl;
-      cout << "Phone Number: " << phoneNumber.at(index) << endl;
-      cout << "Interested Vehicle: " << interestedVehicle.at(index) << endl;
-      cout << "Interested Model: " << interestedModel.at(index) << endl << endl;
+      if(vecCustomers.at(index)->isInterested == true){
+         cout << "Name: " << vecCustomers.at(index)->name << endl;
+         cout << "Email: " << vecCustomers.at(index)->emailAddress << endl;
+         cout << "Phone Number: " << vecCustomers.at(index)->phoneNumber << endl;
+         cout << "Interested Vehicle: " << vecCustomers.at(index)->interestedVehicle << endl;
+         cout << "Interested Model: " << vecCustomers.at(index)->interestedModel << endl << endl;
+      }//end if
    }//end for
 
-}//end findInterestedCustomers()
+}//end PrintPotentialCustomerInfo()
 
 void Customer::PrintCustomersWhoBoughtCar() const{
    int index;
