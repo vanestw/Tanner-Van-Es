@@ -14,13 +14,7 @@ class Vehicle{
     
 
   public:
-    void setYear(int userYear);
-    void setMake(int userMake);
-    void setModel(int userModel);
-    void setColor(int userColor);
-    void setDays(int userDys);
-    void setPrice(int userPrice);
-    void setVin(int userVin);
+    void SearchBy(string type,/*make, model, color, year, daysOnLot*/ string parameter/*input to compare*/)
     void PrintVehicle();
     void SearchBy(string searchType, string searchParameter);
     
