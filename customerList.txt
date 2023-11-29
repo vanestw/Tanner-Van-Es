@@ -1,0 +1,11 @@
+Cesar Soto Cesar@email.com 720-123-4567 false true Toyota Forerunner
+Ian Haneke ihaneke@gmail.com 786-503-0000 true false Toyota Corolla
+John Smith John@hotmail.com 320-123-4567 false true Chevy Cruze
+Jane Doe jDoe@outlook.com 303-225-1011 true false Ford Ranger
+Lukas Miller lMill@gmail.com 786-447-8892 false true Chevy Camaro
+Nancy Schmidt Nschmidt@yahoo.com 307-455-9910 false true GMC Hummer
+Benjiman Mahaffey BennyMahaffey2001@gmail.com 720-113-4456 true false Toyota Camry
+Joseph Narc JNarrc@gmail.com 777-666-5555 true false Ford Rapotor
+David Davidson Dd456@yahoo.com 777-245-3678 true false Subaru Outback
+Cody Jacobson CJJJJJJ@gmail.com 654-321-0987 true false Mazda CX-50
+Lukas Narc Narc1999@hotmail.com 307-982-4582 false true Ford Focus
