@@ -16,9 +16,4 @@ class Vehicle{
   public:
     void SearchBy(string type,/*make, model, color, year, daysOnLot*/ string parameter/*input to compare*/)
     void PrintVehicle();
-    void SearchBy(string searchType, string searchParameter);
-    
-    
-  
-  
 };// end vehicle
