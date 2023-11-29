@@ -17,11 +17,6 @@ void Vehicle::SearchBy(vector<Vehicle> vehicleVector(), string type, string para
     for (ii; ii < type.size(); ii++) {
         tolower(type.at(ii));
     }//end for
-    if (isalpha(parameter.at(0))) {
-        for (ii = 0; ii < parameter.size(); ii++) {
-            tolower(parameter.at(ii));
-        }//end for
-    }//end if
     switch (type.at(2)) {
         case 'k'://make
             for (ii = 0; ii < vehicleVector.size(); ii++) {
