@@ -1,4 +1,5 @@
 #include "vehicle.h"
+#include <string>
 using namespace std;
 
 //Input: vector of vehicles
@@ -45,7 +46,7 @@ void Vehicle::SearchBy(vector<Vehicle> vehicleVector(), string type, string para
         break;
         case 'a'://year
             for (ii = 0; ii < vehicleVector.size(); ii++) {
-                string yearAsString = vehicleVector.at(ii).year;
+                string yearAsString = to_string(vehicleVector.at(ii).year);
                 if (yearAsString == parameter) {
                     PrintVehicle(vehicleVector);
                 }//end if
@@ -53,7 +54,7 @@ void Vehicle::SearchBy(vector<Vehicle> vehicleVector(), string type, string para
         break;
         case 'y'://daysOnLot
             for (ii = 0; ii < vehicleVector.size(); ii++) {
-                string daysAsString = vehicleVector.at(ii).year;
+                string daysAsString = to_string(vehicleVector.at(ii).daysOnLot);
                 if (daysAsString == parameter) {
                     PrintVehicle(vehicleVector);
                 }//end if
