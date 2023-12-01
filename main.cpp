@@ -2,9 +2,9 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include "Customer.h"
-#include "SaleInfo.h"
-#include "Vehicle.h"
+#include "customer.h"
+#include "saleInfo.h"
+#include "vehicle.h"
 
 
 
@@ -40,6 +40,7 @@ int main() {
 	while (!inCarList.eof()) {
 		inCarList >> year >> make >> model >> color >> daysOnLot
 			>> price >> vin;
+		// TODO: write the constructor
 		Vehicle car(year, make, model, color, daysOnLot, price, vin);
 		inventory.push_back(car);
 	}

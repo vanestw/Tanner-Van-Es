@@ -28,6 +28,6 @@ class Vehicle{
     string getModel();
     string getColor();
     string getVin();
-    void SearchBy(string type,/*make, model, color, year, daysOnLot*/ string parameter/*input to compare*/)
+    void SearchBy(string type,/*make, model, color, year, daysOnLot*/ string parameter/*input to compare*/);
     void PrintVehicle();
 };// end vehicle

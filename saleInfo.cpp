@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SaleInfo.h"
+#include "saleInfo.h"
 using namespace std;
 
 void SaleInfo::PrintMonthSales() {
