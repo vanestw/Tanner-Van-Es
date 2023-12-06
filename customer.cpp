@@ -57,3 +57,11 @@ void Customer::PrintCustomersWhoBoughtCar() const{
    }//end for
 
 }//endprintcustomershwoboughtcar
+void Customer::PrintCustomerInfo(Customer* obj) const{
+	cout << "Name: " << obj->name << endl;
+	cout << "Email: " << obj->emailAddress << endl;
+	cout << "Phone Number: " << obj->phoneNumber << endl;
+	cout << "Interested Vehicle: " << obj->interestedVehicle << endl;
+	cout << "Interested Model: " << obj->interestedModel << endl;
+
+}// end PrintCustomerInfo CC/WW
