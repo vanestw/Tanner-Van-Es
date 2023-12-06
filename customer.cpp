@@ -65,3 +65,13 @@ void Customer::PrintCustomerInfo(Customer* obj) const{
 	cout << "Interested Model: " << obj->interestedModel << endl;
 
 }// end PrintCustomerInfo CC/WW
+
+string Customer::FindCustomer(const string& ntf, vector<Customer> vecCustomers) {  // Benicio and Christian
+   string customerName;
+   for(int i = 0;i < vecCustomers.size(); i++) {
+      if(ntf == vecCustomers.at(i)) {
+         customerName = vecCustomers.at(i);
+         return customerName;
+         } // end if
+      }// end for
+    }// end FindCustomer
