@@ -19,18 +19,15 @@ public:
 	// Constructors and Destructor
 	Customer();
 	Customer(const string& n, const string& pn, const string& ea, bool interested, bool bought, const string& vi, const string& vmi);
-	Customer(Customer* other);
-	~Customer();
 
 	// Methods
-	void AddCustomer(Customer* obj);
-	void AddCustomer(const string& name, const string& phoneNumber, const string& emailAddress, bool interested, bool bought, const string& interestedVehicle, const string& interestedModel);
-	void PrintCustomerInfo(Customer* obj) const;
+	void PrintCustomerInfo(Customer obj) const;
 	void PrintEntirCustomerVector();
 	void PrintPotentialCustomerInfo() const;
 	void PrintCustomersWhoBoughtCar() const;
 	int FindCustomerIndex(const string& nameToFind) const;
-	Customer* FindCustomer(const string& nameToFind) const;
+	Customer FindCustomer(const string& nameToFind) const;
+	int FindCustomerIndex(const string& nameToFind, const vector<Customer>& vecCustomers) const; // Edited by CM, add vector parameter
 
 	// Setters and Getters
 	void SetName(const string& n);

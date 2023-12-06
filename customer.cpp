@@ -16,24 +16,8 @@ Customer::Customer(const string& n, const string& pn, const string& ea, bool int
 	interestedModel = vmi;
 } // ends paramaterized Customer()
 
-Customer::Customer(Customer* other) {
-	name = other->name;
-	phoneNumber = other->phoneNumber;
-	emailAddress = other->emailAddress;
-	isInterested = other->isInterested;
-	boughtCar = other->boughtCar;
-	interestedVehicle = other->interestedVehicle;
-	interestedModel = other->interestedModel;
-} // ends copy constructor
-
-Customer::~Customer() {
-	// cout << "CUSTOMER DESTRUCTOR CALLED" << endl;
-} // ends ~Customer()
-
-// TODO .h file
-void Customer::PrintPotentialCustomerInfo(){
-
-   for(int index = 0; index < vecCustomers.size(); index++){
+void Customer::PrintPotentialCustomerInfo() const {
+   for(size_t index = 0; index < vecCustomers.size(); index++){
       if(vecCustomers.at(index)->isInterested == true){
          cout << "Name: " << vecCustomers.at(index)->name << endl;
          cout << "Email: " << vecCustomers.at(index)->emailAddress << endl;
@@ -45,10 +29,20 @@ void Customer::PrintPotentialCustomerInfo(){
 
 }//end PrintPotentialCustomerInfo()
 
-void Customer::PrintCustomersWhoBoughtCar() const{
+// Written by: CM
+int Customer::FindCustomerIndex(const string& nameToFind, const vector<Customer>& vecCustomers) const {
    int index;
+   for (index = 0; index < vecCustomers.size(); ++index) {
+      if (nameToFind == vecCustomers.at(index).name) {
+         return index;
+      } // End if
+   } // End for
+   cout << "Customer not found, no index returned" << endl;
+   return -1; // If customer not found
+} // End FindCustomerIndex()
 
-   for(index = 0; index < vecCustomers.size(); index++){
+void Customer::PrintCustomersWhoBoughtCar() const{
+   for(size_t index = 0; index < vecCustomers.size(); index++){
       if(vecCustomers.at(index)->boughtCar == true){
          cout << vecCustomers.at(index)->name << endl;
          cout << vecCustomers.at(index)->emailAddress << endl;
@@ -57,12 +51,12 @@ void Customer::PrintCustomersWhoBoughtCar() const{
    }//end for
 
 }//endprintcustomershwoboughtcar
-void Customer::PrintCustomerInfo(Customer* obj) const{
-	cout << "Name: " << obj->name << endl;
-	cout << "Email: " << obj->emailAddress << endl;
-	cout << "Phone Number: " << obj->phoneNumber << endl;
-	cout << "Interested Vehicle: " << obj->interestedVehicle << endl;
-	cout << "Interested Model: " << obj->interestedModel << endl;
+void Customer::PrintCustomerInfo(Customer obj) const{
+	cout << "Name: " << obj.name << endl;
+	cout << "Email: " << obj.emailAddress << endl;
+	cout << "Phone Number: " << obj.phoneNumber << endl;
+	cout << "Interested Vehicle: " << obj.interestedVehicle << endl;
+	cout << "Interested Model: " << obj.interestedModel << endl;
 
 }// end PrintCustomerInfo CC/WW
 

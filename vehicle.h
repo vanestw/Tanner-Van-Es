@@ -1,9 +1,10 @@
 #pragma once
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
 
-class Vehicle{
-
+class Vehicle {
   private:
     int year;
     string make;
@@ -13,8 +14,9 @@ class Vehicle{
     int initialPrice;
     string vin;
 
-
   public:
+	Vehicle();
+	Vehicle(int year, string make, string model, string color, int daysOnLot, int price, string vin);
     void setYear(int userYear);
     void setMake(string userMake);
     void setModel(string userModel);
@@ -29,6 +31,8 @@ class Vehicle{
     string getModel();
     string getColor();
     string getVin();
-    void SearchBy(string type,/*make, model, color, year, daysOnLot*/ string parameter/*input to compare*/);
-    void PrintVehicle();
-};// end vehicle
+	void printAllVehicleInfo(vector<Vehicle> vehicle);
+	void printVehicleInfo(Vehicle vehicle);
+	void filterVehiclePrintResults(vector<Vehicle> vecVehicles);
+    // void SearchBy(string type,/*make, model, color, year, daysOnLot*/ string parameter/*input to compare*/);
+}; // end vehicle
