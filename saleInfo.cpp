@@ -1,26 +1,11 @@
 #include <iostream>
 #include "saleInfo.h"
-using namespace std;
-
-void SaleInfo::PrintMonthSales() {
-	cout << salesByMonth << endl;
-}
-
-void printDaySales() {
-	setSalesByDay(int daySales);
-	cout << "Here are the sales for the day: " << salesByDay << endl;
-}
-void printWeekBySales(int salesByWeek) {
-
-cout << "Sales for this week: " << salesByWeek << endl;
-
-}
 
 //Author : Cesar and Ian
 //Input  : Input daySales.
 //Process: Sets salesByDay equal to daySales
 //Output : returns void
-void setSalesByDay(int daySales) {
+void SaleInfo::setSalesByDay(int daySales) {
 	salesByDay = daySales;
 }
 
@@ -28,6 +13,20 @@ void setSalesByDay(int daySales) {
 //Input  : Input weekSales.
 //Process: Sets salesByWeek equal to weekSales
 //Output : returns void
-void setSalesByWeek(int weekSales){
+void SaleInfo::setSalesByWeek(int weekSales){
 	salesByWeek = weekSales;
 }
+
+void SaleInfo::printDayBySales() {
+	cout << "Here are the sales for the day: " << salesByDay << endl;
+}//end PrintDaySales
+
+// ***** Ethan and Gabe *****
+void SaleInfo::printWeekBySales() {
+    cout << "Sales for this week: " << salesByWeek << endl;
+}//end PrintWeekBySales
+
+void SaleInfo::printMonthBySales() {
+    cout << "Sales for this month: " << salesByMonth << endl;
+}//end PrintMonthBySales
+// ***** Ethan and Gabe *****

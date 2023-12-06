@@ -4,16 +4,16 @@ using namespace std;
 
 class SaleInfo{
 
-  private:
-  int salesByDay;
-  int salesByWeek;
-  int salesByMonth;
+	private:
+		int salesByDay;
+		int salesByWeek;
+		int salesByMonth;
 
-  public:
-  void setSalesByDay(int daySales);
-  void setSalesByWeek(int weekSales);
-  void setSalesByMonth(int monthSales);
-  void PrintWeekBySales();
-  void PrintMonthBySales();
-
+	public:
+		void setSalesByDay(int daySales);
+		void setSalesByWeek(int weekSales);
+		void setSalesByMonth(int monthSales);
+		void printWeekBySales();
+		void printMonthBySales();
+		void printDayBySales();
 };// end Sale
