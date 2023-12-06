@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 using namespace std;
 
@@ -11,7 +12,7 @@ class Vehicle{
     int daysOnLot;
     int initialPrice;
     string vin;
-    
+
 
   public:
     void setYear(int userYear);
@@ -31,3 +32,4 @@ class Vehicle{
     void SearchBy(string type,/*make, model, color, year, daysOnLot*/ string parameter/*input to compare*/);
     void PrintVehicle();
 };// end vehicle
+#endif // VEHICLE_H
