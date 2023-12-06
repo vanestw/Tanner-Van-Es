@@ -32,4 +32,3 @@ class Vehicle{
     void SearchBy(string type,/*make, model, color, year, daysOnLot*/ string parameter/*input to compare*/);
     void PrintVehicle();
 };// end vehicle
-#endif // VEHICLE_H
