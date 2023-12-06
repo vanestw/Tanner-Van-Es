@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -16,7 +17,7 @@ class Customer {
 	vector<Customer*> vecCustomers;
 public:
 	// Constructors and Destructor
-	Customer(); 
+	Customer();
 	Customer(const string& n, const string& pn, const string& ea, bool interested, bool bought, const string& vi, const string& vmi);
 	Customer(Customer* other);
 	~Customer();

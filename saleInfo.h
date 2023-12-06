@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 using namespace std;
 
@@ -14,6 +15,6 @@ class SaleInfo{
   void setSalesByMonth(int monthSales);
   void GenerateSales();
 
-  
+
 
 };// end Sale
