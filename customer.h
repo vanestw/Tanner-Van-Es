@@ -25,7 +25,8 @@ public:
 	void PrintEntirCustomerVector();
 	void PrintPotentialCustomerInfo() const;
 	void PrintCustomersWhoBoughtCar() const;
-	int FindCustomerIndex(const string& nameToFind) const;
+	// int FindCustomerIndex(const string& nameToFind) const;
+	// string FindCustomer(const string& ntf, vector<Customer> vecCustomers); // Benicio and Christian
 	Customer FindCustomer(const string& nameToFind) const;
 	int FindCustomerIndex(const string& nameToFind, const vector<Customer>& vecCustomers) const; // Edited by CM, add vector parameter
 

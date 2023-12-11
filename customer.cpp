@@ -60,12 +60,12 @@ void Customer::PrintCustomerInfo(Customer obj) const{
 
 }// end PrintCustomerInfo CC/WW
 
-string Customer::FindCustomer(const string& ntf, vector<Customer> vecCustomers) {  // Benicio and Christian
-   string customerName;
-   for(int i = 0;i < vecCustomers.size(); i++) {
-      if(ntf == vecCustomers.at(i)) {
-         customerName = vecCustomers.at(i);
-         return customerName;
-         } // end if
-      }// end for
-    }// end FindCustomer
+// string Customer::FindCustomer(const string& ntf, vector<Customer> vecCustomers) {  // Benicio and Christian
+//    string customerName;
+//    for(int i = 0;i < vecCustomers.size(); i++) {
+//       if(ntf == vecCustomers.at(i)) {
+//          customerName = vecCustomers.at(i).GetName();
+//          return customerName;
+//          } // end if
+//       }// end for
+//     }// end FindCustomer
